@@ -15,7 +15,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
     
     out_audio_dir = "./wavs"
-    max_file_per_exp=20
+    max_file_per_exp=10
     symmetry = True
     
     if args.clean:
@@ -57,7 +57,7 @@ if __name__ == "__main__":
     form_id = last_form_id+1
     out_cfg = {"page_title": args.title, "form_id": form_id, "questions": []}
     for idx, audio in enumerate(audios):
-        name = audio.replace(".wav", "")
+        name = f"q{idx}" # audio.replace(".wav", "")
         audio_path = os.path.join(out_audio_dir, audio)
         title = f"Câu hỏi {idx}"
         out_cfg['questions'].append({
@@ -66,7 +66,10 @@ if __name__ == "__main__":
             "title": title
         })
     
+    print("Id: ", out_cfg['form_id'])
+    print("N question: ", len(out_cfg["questions"]))
+    
     os.makedirs("./configs", exist_ok=True)
-    with open(os.path.join("./configs", f"{last_form_id}.json"), "w") as f:
+    with open(os.path.join("./configs", f"{form_id}.json"), "w") as f:
         f.write(json.dumps(out_cfg, indent=4))
     
