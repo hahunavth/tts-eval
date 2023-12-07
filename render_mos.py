@@ -12,7 +12,7 @@ def main():
 
     html = template.render(
         page_title="MOS Test 1",
-        form_url="http://localhost:8888",
+        form_url="https://script.google.com/macros/s/AKfycbwRj5-lIESg3zj8dDgaYRsupOfmUnHhyKvgph1Y5HfqbLYdosSehDZvB-q01o15EGbIKw/exec",
         form_id=1,
         questions=[
             {
