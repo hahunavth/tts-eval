@@ -15,7 +15,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
     
     out_audio_dir = "./wavs"
-    max_file_per_exp=10
+    max_file_per_exp=8
     symmetry = True
     
     if args.clean:

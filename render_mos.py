@@ -13,7 +13,7 @@ def main(cfg):
 
     assert cfg
     html = template.render(
-        form_url="https://script.google.com/macros/s/AKfycbwRj5-lIESg3zj8dDgaYRsupOfmUnHhyKvgph1Y5HfqbLYdosSehDZvB-q01o15EGbIKw/exec",
+        form_url="https://script.google.com/macros/s/AKfycbwoHjEpHLsf-h5Bd4axFzQjLWN2MeJcv728LN8A-3TAssnSq4VnLXDggI2L2LdWEAR63w/exec",
         **cfg
     )
     print(html)
