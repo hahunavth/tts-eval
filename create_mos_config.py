@@ -57,9 +57,9 @@ if __name__ == "__main__":
     form_id = last_form_id+1
     out_cfg = {"page_title": args.title, "form_id": form_id, "questions": []}
     for idx, audio in enumerate(audios):
-        name = f"q{idx}" # audio.replace(".wav", "")
+        name = f"q{idx+1}" # audio.replace(".wav", "")
         audio_path = os.path.join(out_audio_dir, audio)
-        title = f"Câu hỏi {idx}"
+        title = f"Câu hỏi {idx+1}"
         out_cfg['questions'].append({
             "name": name,
             "audio_path": audio_path,
