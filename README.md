@@ -20,3 +20,11 @@ Please feel free to use this as a template to create your own online human evalu
     - Take a look at **templates** directory and several rendered HTMLs there as example.
     - Modify **render_mos.py** or **render_pair_comparison.py** and generate HTMLs.
     - Commit and push all the modifications back to GitHub.
+
+
+### Run
+
+```
+python create_mos_config.py -a /kaggle/repo/output/infer/vlsp2023emo/12-05-EXP14-emofs2+shuffle_ref_mel+without_aug-120k /kaggle/repo/output/infer/vlsp2023emo/12-07-EXP17_multi_speaker_move_emo_enc_819177ad/GiangOi -c -t test_create_test
+python render_mos.py -c ./configs/1.json > mos_test_1.html
+```

@@ -1,0 +1,1315 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>test_create_test</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
+        integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            
+    <h1 class="display-4">MOS Test</h1>
+    <p class="lead">Đánh giá chất lượng giọng nói tổng hợp</p>
+    <hr class="my-4">
+    <p>
+        Cảm ơn bạn đã tham gia thí nghiệm này!
+    </p>
+    <p>
+        Trong thí nghiệm này, chúng tôi sử dụng máy tính để tổng hợp giọng nói của con người. 
+        Tệp âm thanh sau đây chứa các bản ghi âm thực và giọng nói tổng hợp, đồng thời mỗi câu đều có kèm theo bản ghi. 
+        Yêu cầu các đối tượng nghe bằng tai nghe và đưa ra các đánh giá sau dựa trên chất lượng của từng tệp âm thanh:
+        <ul>
+            <li>１ (rất tệ)</li>
+            <li>２ (không tốt)</li>
+            <li>３ (bình thường)</li>
+            <li>４ (tốt)</li>
+            <li>５ (rất tốt)</li>
+        </ul>
+    </p>
+
+        </div>
+    </div>
+
+    <div class="container" id="form_container">
+        <form id="theForm" action="https://script.google.com/macros/s/AKfycbwRj5-lIESg3zj8dDgaYRsupOfmUnHhyKvgph1Y5HfqbLYdosSehDZvB-q01o15EGbIKw/exec" method="GET" onsubmit="return preventRepeatedSubmission();">
+            <div class="form-group">
+                <label for="name">Tên：</label>
+                <input class="form-control" type="text" inputmode="text" name="name" required>
+                <small class="form-text text-muted">Yêu cầu*</small>
+            </div>
+            <div class="form-group">
+                <label for="mail">Email：</label>
+                <input class="form-control" type="text" inputmode="email" placeholder="account@example.com" name="mail">
+                <small class="form-text text-muted">Nếu bạn thắng, chúng tôi sẽ thông báo cho bạn qua email</small>
+            </div>
+            
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 0</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/ID1_pv_yan_2_131-emofs2_50000-happy.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_131-emofs2_50000-happy" id="ID1_pv_yan_2_131-emofs2_50000-happy_1" value="5" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_131-emofs2_50000-happy_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_131-emofs2_50000-happy" id="ID1_pv_yan_2_131-emofs2_50000-happy_2" value="4" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_131-emofs2_50000-happy_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_131-emofs2_50000-happy" id="ID1_pv_yan_2_131-emofs2_50000-happy_3" value="3" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_131-emofs2_50000-happy_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_131-emofs2_50000-happy" id="ID1_pv_yan_2_131-emofs2_50000-happy_4" value="2" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_131-emofs2_50000-happy_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_131-emofs2_50000-happy" id="ID1_pv_yan_2_131-emofs2_50000-happy_5" value="1" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_131-emofs2_50000-happy_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 1</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/ID1_2-emofs2_50000-angry.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_2-emofs2_50000-angry" id="ID1_2-emofs2_50000-angry_1" value="5" required>
+                    <label class="form-check-label" for="ID1_2-emofs2_50000-angry_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_2-emofs2_50000-angry" id="ID1_2-emofs2_50000-angry_2" value="4" required>
+                    <label class="form-check-label" for="ID1_2-emofs2_50000-angry_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_2-emofs2_50000-angry" id="ID1_2-emofs2_50000-angry_3" value="3" required>
+                    <label class="form-check-label" for="ID1_2-emofs2_50000-angry_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_2-emofs2_50000-angry" id="ID1_2-emofs2_50000-angry_4" value="2" required>
+                    <label class="form-check-label" for="ID1_2-emofs2_50000-angry_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_2-emofs2_50000-angry" id="ID1_2-emofs2_50000-angry_5" value="1" required>
+                    <label class="form-check-label" for="ID1_2-emofs2_50000-angry_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 2</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/ID1_pv_yan_2_135-emofs2_50000-surprise.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_135-emofs2_50000-surprise" id="ID1_pv_yan_2_135-emofs2_50000-surprise_1" value="5" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_135-emofs2_50000-surprise_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_135-emofs2_50000-surprise" id="ID1_pv_yan_2_135-emofs2_50000-surprise_2" value="4" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_135-emofs2_50000-surprise_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_135-emofs2_50000-surprise" id="ID1_pv_yan_2_135-emofs2_50000-surprise_3" value="3" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_135-emofs2_50000-surprise_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_135-emofs2_50000-surprise" id="ID1_pv_yan_2_135-emofs2_50000-surprise_4" value="2" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_135-emofs2_50000-surprise_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_135-emofs2_50000-surprise" id="ID1_pv_yan_2_135-emofs2_50000-surprise_5" value="1" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_135-emofs2_50000-surprise_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 3</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/ID1_pv_yan_2_135-emofs2_50000-neutral.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_135-emofs2_50000-neutral" id="ID1_pv_yan_2_135-emofs2_50000-neutral_1" value="5" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_135-emofs2_50000-neutral_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_135-emofs2_50000-neutral" id="ID1_pv_yan_2_135-emofs2_50000-neutral_2" value="4" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_135-emofs2_50000-neutral_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_135-emofs2_50000-neutral" id="ID1_pv_yan_2_135-emofs2_50000-neutral_3" value="3" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_135-emofs2_50000-neutral_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_135-emofs2_50000-neutral" id="ID1_pv_yan_2_135-emofs2_50000-neutral_4" value="2" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_135-emofs2_50000-neutral_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_135-emofs2_50000-neutral" id="ID1_pv_yan_2_135-emofs2_50000-neutral_5" value="1" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_135-emofs2_50000-neutral_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 4</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/ID1_pv_yan_2_133-emofs2_50000-neutral.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_133-emofs2_50000-neutral" id="ID1_pv_yan_2_133-emofs2_50000-neutral_1" value="5" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_133-emofs2_50000-neutral_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_133-emofs2_50000-neutral" id="ID1_pv_yan_2_133-emofs2_50000-neutral_2" value="4" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_133-emofs2_50000-neutral_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_133-emofs2_50000-neutral" id="ID1_pv_yan_2_133-emofs2_50000-neutral_3" value="3" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_133-emofs2_50000-neutral_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_133-emofs2_50000-neutral" id="ID1_pv_yan_2_133-emofs2_50000-neutral_4" value="2" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_133-emofs2_50000-neutral_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_133-emofs2_50000-neutral" id="ID1_pv_yan_2_133-emofs2_50000-neutral_5" value="1" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_133-emofs2_50000-neutral_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 5</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/ID1_pv_yan_2_133-emofs2_50000-surprise.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_133-emofs2_50000-surprise" id="ID1_pv_yan_2_133-emofs2_50000-surprise_1" value="5" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_133-emofs2_50000-surprise_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_133-emofs2_50000-surprise" id="ID1_pv_yan_2_133-emofs2_50000-surprise_2" value="4" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_133-emofs2_50000-surprise_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_133-emofs2_50000-surprise" id="ID1_pv_yan_2_133-emofs2_50000-surprise_3" value="3" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_133-emofs2_50000-surprise_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_133-emofs2_50000-surprise" id="ID1_pv_yan_2_133-emofs2_50000-surprise_4" value="2" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_133-emofs2_50000-surprise_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_133-emofs2_50000-surprise" id="ID1_pv_yan_2_133-emofs2_50000-surprise_5" value="1" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_133-emofs2_50000-surprise_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 6</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/ID0_2-emofs2_120000-angry.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_2-emofs2_120000-angry" id="ID0_2-emofs2_120000-angry_1" value="5" required>
+                    <label class="form-check-label" for="ID0_2-emofs2_120000-angry_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_2-emofs2_120000-angry" id="ID0_2-emofs2_120000-angry_2" value="4" required>
+                    <label class="form-check-label" for="ID0_2-emofs2_120000-angry_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_2-emofs2_120000-angry" id="ID0_2-emofs2_120000-angry_3" value="3" required>
+                    <label class="form-check-label" for="ID0_2-emofs2_120000-angry_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_2-emofs2_120000-angry" id="ID0_2-emofs2_120000-angry_4" value="2" required>
+                    <label class="form-check-label" for="ID0_2-emofs2_120000-angry_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_2-emofs2_120000-angry" id="ID0_2-emofs2_120000-angry_5" value="1" required>
+                    <label class="form-check-label" for="ID0_2-emofs2_120000-angry_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 7</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/ID0_5-emofs2_120000-sad.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_5-emofs2_120000-sad" id="ID0_5-emofs2_120000-sad_1" value="5" required>
+                    <label class="form-check-label" for="ID0_5-emofs2_120000-sad_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_5-emofs2_120000-sad" id="ID0_5-emofs2_120000-sad_2" value="4" required>
+                    <label class="form-check-label" for="ID0_5-emofs2_120000-sad_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_5-emofs2_120000-sad" id="ID0_5-emofs2_120000-sad_3" value="3" required>
+                    <label class="form-check-label" for="ID0_5-emofs2_120000-sad_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_5-emofs2_120000-sad" id="ID0_5-emofs2_120000-sad_4" value="2" required>
+                    <label class="form-check-label" for="ID0_5-emofs2_120000-sad_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_5-emofs2_120000-sad" id="ID0_5-emofs2_120000-sad_5" value="1" required>
+                    <label class="form-check-label" for="ID0_5-emofs2_120000-sad_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 8</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/ID0_pv_yan_2_132-emofs2_120000-happy.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_132-emofs2_120000-happy" id="ID0_pv_yan_2_132-emofs2_120000-happy_1" value="5" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_132-emofs2_120000-happy_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_132-emofs2_120000-happy" id="ID0_pv_yan_2_132-emofs2_120000-happy_2" value="4" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_132-emofs2_120000-happy_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_132-emofs2_120000-happy" id="ID0_pv_yan_2_132-emofs2_120000-happy_3" value="3" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_132-emofs2_120000-happy_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_132-emofs2_120000-happy" id="ID0_pv_yan_2_132-emofs2_120000-happy_4" value="2" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_132-emofs2_120000-happy_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_132-emofs2_120000-happy" id="ID0_pv_yan_2_132-emofs2_120000-happy_5" value="1" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_132-emofs2_120000-happy_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 9</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/ID0_pv_yan_2_130-emofs2_120000-angry.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_130-emofs2_120000-angry" id="ID0_pv_yan_2_130-emofs2_120000-angry_1" value="5" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_130-emofs2_120000-angry_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_130-emofs2_120000-angry" id="ID0_pv_yan_2_130-emofs2_120000-angry_2" value="4" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_130-emofs2_120000-angry_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_130-emofs2_120000-angry" id="ID0_pv_yan_2_130-emofs2_120000-angry_3" value="3" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_130-emofs2_120000-angry_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_130-emofs2_120000-angry" id="ID0_pv_yan_2_130-emofs2_120000-angry_4" value="2" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_130-emofs2_120000-angry_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_130-emofs2_120000-angry" id="ID0_pv_yan_2_130-emofs2_120000-angry_5" value="1" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_130-emofs2_120000-angry_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 10</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/ID0_pv_yan_2_135-emofs2_120000-surprise.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_135-emofs2_120000-surprise" id="ID0_pv_yan_2_135-emofs2_120000-surprise_1" value="5" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_135-emofs2_120000-surprise_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_135-emofs2_120000-surprise" id="ID0_pv_yan_2_135-emofs2_120000-surprise_2" value="4" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_135-emofs2_120000-surprise_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_135-emofs2_120000-surprise" id="ID0_pv_yan_2_135-emofs2_120000-surprise_3" value="3" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_135-emofs2_120000-surprise_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_135-emofs2_120000-surprise" id="ID0_pv_yan_2_135-emofs2_120000-surprise_4" value="2" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_135-emofs2_120000-surprise_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_135-emofs2_120000-surprise" id="ID0_pv_yan_2_135-emofs2_120000-surprise_5" value="1" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_135-emofs2_120000-surprise_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 11</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/ID0_6-emofs2_120000-angry.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_6-emofs2_120000-angry" id="ID0_6-emofs2_120000-angry_1" value="5" required>
+                    <label class="form-check-label" for="ID0_6-emofs2_120000-angry_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_6-emofs2_120000-angry" id="ID0_6-emofs2_120000-angry_2" value="4" required>
+                    <label class="form-check-label" for="ID0_6-emofs2_120000-angry_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_6-emofs2_120000-angry" id="ID0_6-emofs2_120000-angry_3" value="3" required>
+                    <label class="form-check-label" for="ID0_6-emofs2_120000-angry_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_6-emofs2_120000-angry" id="ID0_6-emofs2_120000-angry_4" value="2" required>
+                    <label class="form-check-label" for="ID0_6-emofs2_120000-angry_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_6-emofs2_120000-angry" id="ID0_6-emofs2_120000-angry_5" value="1" required>
+                    <label class="form-check-label" for="ID0_6-emofs2_120000-angry_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 12</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/ID1_pv_yan_2_134-emofs2_50000-angry.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_134-emofs2_50000-angry" id="ID1_pv_yan_2_134-emofs2_50000-angry_1" value="5" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_134-emofs2_50000-angry_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_134-emofs2_50000-angry" id="ID1_pv_yan_2_134-emofs2_50000-angry_2" value="4" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_134-emofs2_50000-angry_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_134-emofs2_50000-angry" id="ID1_pv_yan_2_134-emofs2_50000-angry_3" value="3" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_134-emofs2_50000-angry_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_134-emofs2_50000-angry" id="ID1_pv_yan_2_134-emofs2_50000-angry_4" value="2" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_134-emofs2_50000-angry_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_134-emofs2_50000-angry" id="ID1_pv_yan_2_134-emofs2_50000-angry_5" value="1" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_134-emofs2_50000-angry_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 13</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/ID0_pv_yan_2_133-emofs2_120000-neutral.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_133-emofs2_120000-neutral" id="ID0_pv_yan_2_133-emofs2_120000-neutral_1" value="5" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_133-emofs2_120000-neutral_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_133-emofs2_120000-neutral" id="ID0_pv_yan_2_133-emofs2_120000-neutral_2" value="4" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_133-emofs2_120000-neutral_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_133-emofs2_120000-neutral" id="ID0_pv_yan_2_133-emofs2_120000-neutral_3" value="3" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_133-emofs2_120000-neutral_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_133-emofs2_120000-neutral" id="ID0_pv_yan_2_133-emofs2_120000-neutral_4" value="2" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_133-emofs2_120000-neutral_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_133-emofs2_120000-neutral" id="ID0_pv_yan_2_133-emofs2_120000-neutral_5" value="1" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_133-emofs2_120000-neutral_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 14</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/ID0_5-emofs2_120000-neutral.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_5-emofs2_120000-neutral" id="ID0_5-emofs2_120000-neutral_1" value="5" required>
+                    <label class="form-check-label" for="ID0_5-emofs2_120000-neutral_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_5-emofs2_120000-neutral" id="ID0_5-emofs2_120000-neutral_2" value="4" required>
+                    <label class="form-check-label" for="ID0_5-emofs2_120000-neutral_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_5-emofs2_120000-neutral" id="ID0_5-emofs2_120000-neutral_3" value="3" required>
+                    <label class="form-check-label" for="ID0_5-emofs2_120000-neutral_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_5-emofs2_120000-neutral" id="ID0_5-emofs2_120000-neutral_4" value="2" required>
+                    <label class="form-check-label" for="ID0_5-emofs2_120000-neutral_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_5-emofs2_120000-neutral" id="ID0_5-emofs2_120000-neutral_5" value="1" required>
+                    <label class="form-check-label" for="ID0_5-emofs2_120000-neutral_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 15</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/ID1_5-emofs2_50000-sad.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_5-emofs2_50000-sad" id="ID1_5-emofs2_50000-sad_1" value="5" required>
+                    <label class="form-check-label" for="ID1_5-emofs2_50000-sad_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_5-emofs2_50000-sad" id="ID1_5-emofs2_50000-sad_2" value="4" required>
+                    <label class="form-check-label" for="ID1_5-emofs2_50000-sad_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_5-emofs2_50000-sad" id="ID1_5-emofs2_50000-sad_3" value="3" required>
+                    <label class="form-check-label" for="ID1_5-emofs2_50000-sad_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_5-emofs2_50000-sad" id="ID1_5-emofs2_50000-sad_4" value="2" required>
+                    <label class="form-check-label" for="ID1_5-emofs2_50000-sad_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_5-emofs2_50000-sad" id="ID1_5-emofs2_50000-sad_5" value="1" required>
+                    <label class="form-check-label" for="ID1_5-emofs2_50000-sad_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 16</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/ID0_pv_yan_2_131-emofs2_120000-happy.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_131-emofs2_120000-happy" id="ID0_pv_yan_2_131-emofs2_120000-happy_1" value="5" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_131-emofs2_120000-happy_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_131-emofs2_120000-happy" id="ID0_pv_yan_2_131-emofs2_120000-happy_2" value="4" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_131-emofs2_120000-happy_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_131-emofs2_120000-happy" id="ID0_pv_yan_2_131-emofs2_120000-happy_3" value="3" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_131-emofs2_120000-happy_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_131-emofs2_120000-happy" id="ID0_pv_yan_2_131-emofs2_120000-happy_4" value="2" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_131-emofs2_120000-happy_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_131-emofs2_120000-happy" id="ID0_pv_yan_2_131-emofs2_120000-happy_5" value="1" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_131-emofs2_120000-happy_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 17</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/ID0_pv_yan_2_132-emofs2_120000-angry.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_132-emofs2_120000-angry" id="ID0_pv_yan_2_132-emofs2_120000-angry_1" value="5" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_132-emofs2_120000-angry_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_132-emofs2_120000-angry" id="ID0_pv_yan_2_132-emofs2_120000-angry_2" value="4" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_132-emofs2_120000-angry_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_132-emofs2_120000-angry" id="ID0_pv_yan_2_132-emofs2_120000-angry_3" value="3" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_132-emofs2_120000-angry_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_132-emofs2_120000-angry" id="ID0_pv_yan_2_132-emofs2_120000-angry_4" value="2" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_132-emofs2_120000-angry_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_132-emofs2_120000-angry" id="ID0_pv_yan_2_132-emofs2_120000-angry_5" value="1" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_132-emofs2_120000-angry_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 18</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/ID1_pv_yan_2_132-emofs2_50000-angry.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_132-emofs2_50000-angry" id="ID1_pv_yan_2_132-emofs2_50000-angry_1" value="5" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_132-emofs2_50000-angry_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_132-emofs2_50000-angry" id="ID1_pv_yan_2_132-emofs2_50000-angry_2" value="4" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_132-emofs2_50000-angry_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_132-emofs2_50000-angry" id="ID1_pv_yan_2_132-emofs2_50000-angry_3" value="3" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_132-emofs2_50000-angry_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_132-emofs2_50000-angry" id="ID1_pv_yan_2_132-emofs2_50000-angry_4" value="2" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_132-emofs2_50000-angry_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_132-emofs2_50000-angry" id="ID1_pv_yan_2_132-emofs2_50000-angry_5" value="1" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_132-emofs2_50000-angry_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 19</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/ID0_pv_yan_2_134-emofs2_120000-neutral.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_134-emofs2_120000-neutral" id="ID0_pv_yan_2_134-emofs2_120000-neutral_1" value="5" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_134-emofs2_120000-neutral_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_134-emofs2_120000-neutral" id="ID0_pv_yan_2_134-emofs2_120000-neutral_2" value="4" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_134-emofs2_120000-neutral_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_134-emofs2_120000-neutral" id="ID0_pv_yan_2_134-emofs2_120000-neutral_3" value="3" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_134-emofs2_120000-neutral_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_134-emofs2_120000-neutral" id="ID0_pv_yan_2_134-emofs2_120000-neutral_4" value="2" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_134-emofs2_120000-neutral_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_134-emofs2_120000-neutral" id="ID0_pv_yan_2_134-emofs2_120000-neutral_5" value="1" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_134-emofs2_120000-neutral_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 20</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/ID1_5-emofs2_50000-neutral.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_5-emofs2_50000-neutral" id="ID1_5-emofs2_50000-neutral_1" value="5" required>
+                    <label class="form-check-label" for="ID1_5-emofs2_50000-neutral_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_5-emofs2_50000-neutral" id="ID1_5-emofs2_50000-neutral_2" value="4" required>
+                    <label class="form-check-label" for="ID1_5-emofs2_50000-neutral_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_5-emofs2_50000-neutral" id="ID1_5-emofs2_50000-neutral_3" value="3" required>
+                    <label class="form-check-label" for="ID1_5-emofs2_50000-neutral_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_5-emofs2_50000-neutral" id="ID1_5-emofs2_50000-neutral_4" value="2" required>
+                    <label class="form-check-label" for="ID1_5-emofs2_50000-neutral_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_5-emofs2_50000-neutral" id="ID1_5-emofs2_50000-neutral_5" value="1" required>
+                    <label class="form-check-label" for="ID1_5-emofs2_50000-neutral_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 21</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/ID1_pv_yan_2_130-emofs2_50000-angry.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_130-emofs2_50000-angry" id="ID1_pv_yan_2_130-emofs2_50000-angry_1" value="5" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_130-emofs2_50000-angry_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_130-emofs2_50000-angry" id="ID1_pv_yan_2_130-emofs2_50000-angry_2" value="4" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_130-emofs2_50000-angry_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_130-emofs2_50000-angry" id="ID1_pv_yan_2_130-emofs2_50000-angry_3" value="3" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_130-emofs2_50000-angry_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_130-emofs2_50000-angry" id="ID1_pv_yan_2_130-emofs2_50000-angry_4" value="2" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_130-emofs2_50000-angry_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_130-emofs2_50000-angry" id="ID1_pv_yan_2_130-emofs2_50000-angry_5" value="1" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_130-emofs2_50000-angry_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 22</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/ID1_6-emofs2_50000-angry.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_6-emofs2_50000-angry" id="ID1_6-emofs2_50000-angry_1" value="5" required>
+                    <label class="form-check-label" for="ID1_6-emofs2_50000-angry_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_6-emofs2_50000-angry" id="ID1_6-emofs2_50000-angry_2" value="4" required>
+                    <label class="form-check-label" for="ID1_6-emofs2_50000-angry_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_6-emofs2_50000-angry" id="ID1_6-emofs2_50000-angry_3" value="3" required>
+                    <label class="form-check-label" for="ID1_6-emofs2_50000-angry_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_6-emofs2_50000-angry" id="ID1_6-emofs2_50000-angry_4" value="2" required>
+                    <label class="form-check-label" for="ID1_6-emofs2_50000-angry_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_6-emofs2_50000-angry" id="ID1_6-emofs2_50000-angry_5" value="1" required>
+                    <label class="form-check-label" for="ID1_6-emofs2_50000-angry_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 23</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/ID1_4-emofs2_50000-angry.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_4-emofs2_50000-angry" id="ID1_4-emofs2_50000-angry_1" value="5" required>
+                    <label class="form-check-label" for="ID1_4-emofs2_50000-angry_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_4-emofs2_50000-angry" id="ID1_4-emofs2_50000-angry_2" value="4" required>
+                    <label class="form-check-label" for="ID1_4-emofs2_50000-angry_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_4-emofs2_50000-angry" id="ID1_4-emofs2_50000-angry_3" value="3" required>
+                    <label class="form-check-label" for="ID1_4-emofs2_50000-angry_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_4-emofs2_50000-angry" id="ID1_4-emofs2_50000-angry_4" value="2" required>
+                    <label class="form-check-label" for="ID1_4-emofs2_50000-angry_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_4-emofs2_50000-angry" id="ID1_4-emofs2_50000-angry_5" value="1" required>
+                    <label class="form-check-label" for="ID1_4-emofs2_50000-angry_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 24</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/ID0_pv_yan_2_132-emofs2_120000-neutral.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_132-emofs2_120000-neutral" id="ID0_pv_yan_2_132-emofs2_120000-neutral_1" value="5" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_132-emofs2_120000-neutral_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_132-emofs2_120000-neutral" id="ID0_pv_yan_2_132-emofs2_120000-neutral_2" value="4" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_132-emofs2_120000-neutral_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_132-emofs2_120000-neutral" id="ID0_pv_yan_2_132-emofs2_120000-neutral_3" value="3" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_132-emofs2_120000-neutral_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_132-emofs2_120000-neutral" id="ID0_pv_yan_2_132-emofs2_120000-neutral_4" value="2" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_132-emofs2_120000-neutral_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_132-emofs2_120000-neutral" id="ID0_pv_yan_2_132-emofs2_120000-neutral_5" value="1" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_132-emofs2_120000-neutral_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 25</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/ID0_pv_yan_2_134-emofs2_120000-angry.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_134-emofs2_120000-angry" id="ID0_pv_yan_2_134-emofs2_120000-angry_1" value="5" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_134-emofs2_120000-angry_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_134-emofs2_120000-angry" id="ID0_pv_yan_2_134-emofs2_120000-angry_2" value="4" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_134-emofs2_120000-angry_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_134-emofs2_120000-angry" id="ID0_pv_yan_2_134-emofs2_120000-angry_3" value="3" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_134-emofs2_120000-angry_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_134-emofs2_120000-angry" id="ID0_pv_yan_2_134-emofs2_120000-angry_4" value="2" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_134-emofs2_120000-angry_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_134-emofs2_120000-angry" id="ID0_pv_yan_2_134-emofs2_120000-angry_5" value="1" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_134-emofs2_120000-angry_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 26</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/ID1_pv_yan_2_132-emofs2_50000-neutral.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_132-emofs2_50000-neutral" id="ID1_pv_yan_2_132-emofs2_50000-neutral_1" value="5" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_132-emofs2_50000-neutral_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_132-emofs2_50000-neutral" id="ID1_pv_yan_2_132-emofs2_50000-neutral_2" value="4" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_132-emofs2_50000-neutral_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_132-emofs2_50000-neutral" id="ID1_pv_yan_2_132-emofs2_50000-neutral_3" value="3" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_132-emofs2_50000-neutral_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_132-emofs2_50000-neutral" id="ID1_pv_yan_2_132-emofs2_50000-neutral_4" value="2" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_132-emofs2_50000-neutral_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_132-emofs2_50000-neutral" id="ID1_pv_yan_2_132-emofs2_50000-neutral_5" value="1" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_132-emofs2_50000-neutral_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 27</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/ID0_pv_yan_2_133-emofs2_120000-surprise.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_133-emofs2_120000-surprise" id="ID0_pv_yan_2_133-emofs2_120000-surprise_1" value="5" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_133-emofs2_120000-surprise_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_133-emofs2_120000-surprise" id="ID0_pv_yan_2_133-emofs2_120000-surprise_2" value="4" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_133-emofs2_120000-surprise_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_133-emofs2_120000-surprise" id="ID0_pv_yan_2_133-emofs2_120000-surprise_3" value="3" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_133-emofs2_120000-surprise_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_133-emofs2_120000-surprise" id="ID0_pv_yan_2_133-emofs2_120000-surprise_4" value="2" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_133-emofs2_120000-surprise_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_133-emofs2_120000-surprise" id="ID0_pv_yan_2_133-emofs2_120000-surprise_5" value="1" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_133-emofs2_120000-surprise_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 28</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/ID0_5-emofs2_120000-happy.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_5-emofs2_120000-happy" id="ID0_5-emofs2_120000-happy_1" value="5" required>
+                    <label class="form-check-label" for="ID0_5-emofs2_120000-happy_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_5-emofs2_120000-happy" id="ID0_5-emofs2_120000-happy_2" value="4" required>
+                    <label class="form-check-label" for="ID0_5-emofs2_120000-happy_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_5-emofs2_120000-happy" id="ID0_5-emofs2_120000-happy_3" value="3" required>
+                    <label class="form-check-label" for="ID0_5-emofs2_120000-happy_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_5-emofs2_120000-happy" id="ID0_5-emofs2_120000-happy_4" value="2" required>
+                    <label class="form-check-label" for="ID0_5-emofs2_120000-happy_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_5-emofs2_120000-happy" id="ID0_5-emofs2_120000-happy_5" value="1" required>
+                    <label class="form-check-label" for="ID0_5-emofs2_120000-happy_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 29</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/ID1_pv_yan_2_134-emofs2_50000-neutral.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_134-emofs2_50000-neutral" id="ID1_pv_yan_2_134-emofs2_50000-neutral_1" value="5" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_134-emofs2_50000-neutral_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_134-emofs2_50000-neutral" id="ID1_pv_yan_2_134-emofs2_50000-neutral_2" value="4" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_134-emofs2_50000-neutral_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_134-emofs2_50000-neutral" id="ID1_pv_yan_2_134-emofs2_50000-neutral_3" value="3" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_134-emofs2_50000-neutral_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_134-emofs2_50000-neutral" id="ID1_pv_yan_2_134-emofs2_50000-neutral_4" value="2" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_134-emofs2_50000-neutral_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_134-emofs2_50000-neutral" id="ID1_pv_yan_2_134-emofs2_50000-neutral_5" value="1" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_134-emofs2_50000-neutral_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 30</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/ID0_4-emofs2_120000-angry.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_4-emofs2_120000-angry" id="ID0_4-emofs2_120000-angry_1" value="5" required>
+                    <label class="form-check-label" for="ID0_4-emofs2_120000-angry_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_4-emofs2_120000-angry" id="ID0_4-emofs2_120000-angry_2" value="4" required>
+                    <label class="form-check-label" for="ID0_4-emofs2_120000-angry_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_4-emofs2_120000-angry" id="ID0_4-emofs2_120000-angry_3" value="3" required>
+                    <label class="form-check-label" for="ID0_4-emofs2_120000-angry_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_4-emofs2_120000-angry" id="ID0_4-emofs2_120000-angry_4" value="2" required>
+                    <label class="form-check-label" for="ID0_4-emofs2_120000-angry_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_4-emofs2_120000-angry" id="ID0_4-emofs2_120000-angry_5" value="1" required>
+                    <label class="form-check-label" for="ID0_4-emofs2_120000-angry_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 31</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/ID0_6-emofs2_120000-surprise.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_6-emofs2_120000-surprise" id="ID0_6-emofs2_120000-surprise_1" value="5" required>
+                    <label class="form-check-label" for="ID0_6-emofs2_120000-surprise_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_6-emofs2_120000-surprise" id="ID0_6-emofs2_120000-surprise_2" value="4" required>
+                    <label class="form-check-label" for="ID0_6-emofs2_120000-surprise_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_6-emofs2_120000-surprise" id="ID0_6-emofs2_120000-surprise_3" value="3" required>
+                    <label class="form-check-label" for="ID0_6-emofs2_120000-surprise_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_6-emofs2_120000-surprise" id="ID0_6-emofs2_120000-surprise_4" value="2" required>
+                    <label class="form-check-label" for="ID0_6-emofs2_120000-surprise_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_6-emofs2_120000-surprise" id="ID0_6-emofs2_120000-surprise_5" value="1" required>
+                    <label class="form-check-label" for="ID0_6-emofs2_120000-surprise_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 32</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/ID1_6-emofs2_50000-surprise.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_6-emofs2_50000-surprise" id="ID1_6-emofs2_50000-surprise_1" value="5" required>
+                    <label class="form-check-label" for="ID1_6-emofs2_50000-surprise_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_6-emofs2_50000-surprise" id="ID1_6-emofs2_50000-surprise_2" value="4" required>
+                    <label class="form-check-label" for="ID1_6-emofs2_50000-surprise_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_6-emofs2_50000-surprise" id="ID1_6-emofs2_50000-surprise_3" value="3" required>
+                    <label class="form-check-label" for="ID1_6-emofs2_50000-surprise_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_6-emofs2_50000-surprise" id="ID1_6-emofs2_50000-surprise_4" value="2" required>
+                    <label class="form-check-label" for="ID1_6-emofs2_50000-surprise_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_6-emofs2_50000-surprise" id="ID1_6-emofs2_50000-surprise_5" value="1" required>
+                    <label class="form-check-label" for="ID1_6-emofs2_50000-surprise_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 33</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/ID0_pv_yan_2_131-emofs2_120000-neutral.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_131-emofs2_120000-neutral" id="ID0_pv_yan_2_131-emofs2_120000-neutral_1" value="5" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_131-emofs2_120000-neutral_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_131-emofs2_120000-neutral" id="ID0_pv_yan_2_131-emofs2_120000-neutral_2" value="4" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_131-emofs2_120000-neutral_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_131-emofs2_120000-neutral" id="ID0_pv_yan_2_131-emofs2_120000-neutral_3" value="3" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_131-emofs2_120000-neutral_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_131-emofs2_120000-neutral" id="ID0_pv_yan_2_131-emofs2_120000-neutral_4" value="2" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_131-emofs2_120000-neutral_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_131-emofs2_120000-neutral" id="ID0_pv_yan_2_131-emofs2_120000-neutral_5" value="1" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_131-emofs2_120000-neutral_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 34</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/ID0_pv_yan_2_130-emofs2_120000-sad.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_130-emofs2_120000-sad" id="ID0_pv_yan_2_130-emofs2_120000-sad_1" value="5" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_130-emofs2_120000-sad_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_130-emofs2_120000-sad" id="ID0_pv_yan_2_130-emofs2_120000-sad_2" value="4" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_130-emofs2_120000-sad_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_130-emofs2_120000-sad" id="ID0_pv_yan_2_130-emofs2_120000-sad_3" value="3" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_130-emofs2_120000-sad_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_130-emofs2_120000-sad" id="ID0_pv_yan_2_130-emofs2_120000-sad_4" value="2" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_130-emofs2_120000-sad_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_130-emofs2_120000-sad" id="ID0_pv_yan_2_130-emofs2_120000-sad_5" value="1" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_130-emofs2_120000-sad_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 35</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/ID1_5-emofs2_50000-happy.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_5-emofs2_50000-happy" id="ID1_5-emofs2_50000-happy_1" value="5" required>
+                    <label class="form-check-label" for="ID1_5-emofs2_50000-happy_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_5-emofs2_50000-happy" id="ID1_5-emofs2_50000-happy_2" value="4" required>
+                    <label class="form-check-label" for="ID1_5-emofs2_50000-happy_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_5-emofs2_50000-happy" id="ID1_5-emofs2_50000-happy_3" value="3" required>
+                    <label class="form-check-label" for="ID1_5-emofs2_50000-happy_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_5-emofs2_50000-happy" id="ID1_5-emofs2_50000-happy_4" value="2" required>
+                    <label class="form-check-label" for="ID1_5-emofs2_50000-happy_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_5-emofs2_50000-happy" id="ID1_5-emofs2_50000-happy_5" value="1" required>
+                    <label class="form-check-label" for="ID1_5-emofs2_50000-happy_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 36</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/ID1_pv_yan_2_132-emofs2_50000-happy.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_132-emofs2_50000-happy" id="ID1_pv_yan_2_132-emofs2_50000-happy_1" value="5" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_132-emofs2_50000-happy_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_132-emofs2_50000-happy" id="ID1_pv_yan_2_132-emofs2_50000-happy_2" value="4" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_132-emofs2_50000-happy_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_132-emofs2_50000-happy" id="ID1_pv_yan_2_132-emofs2_50000-happy_3" value="3" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_132-emofs2_50000-happy_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_132-emofs2_50000-happy" id="ID1_pv_yan_2_132-emofs2_50000-happy_4" value="2" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_132-emofs2_50000-happy_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_132-emofs2_50000-happy" id="ID1_pv_yan_2_132-emofs2_50000-happy_5" value="1" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_132-emofs2_50000-happy_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 37</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/ID1_pv_yan_2_130-emofs2_50000-sad.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_130-emofs2_50000-sad" id="ID1_pv_yan_2_130-emofs2_50000-sad_1" value="5" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_130-emofs2_50000-sad_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_130-emofs2_50000-sad" id="ID1_pv_yan_2_130-emofs2_50000-sad_2" value="4" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_130-emofs2_50000-sad_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_130-emofs2_50000-sad" id="ID1_pv_yan_2_130-emofs2_50000-sad_3" value="3" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_130-emofs2_50000-sad_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_130-emofs2_50000-sad" id="ID1_pv_yan_2_130-emofs2_50000-sad_4" value="2" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_130-emofs2_50000-sad_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_130-emofs2_50000-sad" id="ID1_pv_yan_2_130-emofs2_50000-sad_5" value="1" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_130-emofs2_50000-sad_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 38</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/ID1_pv_yan_2_131-emofs2_50000-neutral.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_131-emofs2_50000-neutral" id="ID1_pv_yan_2_131-emofs2_50000-neutral_1" value="5" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_131-emofs2_50000-neutral_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_131-emofs2_50000-neutral" id="ID1_pv_yan_2_131-emofs2_50000-neutral_2" value="4" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_131-emofs2_50000-neutral_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_131-emofs2_50000-neutral" id="ID1_pv_yan_2_131-emofs2_50000-neutral_3" value="3" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_131-emofs2_50000-neutral_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_131-emofs2_50000-neutral" id="ID1_pv_yan_2_131-emofs2_50000-neutral_4" value="2" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_131-emofs2_50000-neutral_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID1_pv_yan_2_131-emofs2_50000-neutral" id="ID1_pv_yan_2_131-emofs2_50000-neutral_5" value="1" required>
+                    <label class="form-check-label" for="ID1_pv_yan_2_131-emofs2_50000-neutral_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 39</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/ID0_pv_yan_2_135-emofs2_120000-neutral.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_135-emofs2_120000-neutral" id="ID0_pv_yan_2_135-emofs2_120000-neutral_1" value="5" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_135-emofs2_120000-neutral_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_135-emofs2_120000-neutral" id="ID0_pv_yan_2_135-emofs2_120000-neutral_2" value="4" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_135-emofs2_120000-neutral_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_135-emofs2_120000-neutral" id="ID0_pv_yan_2_135-emofs2_120000-neutral_3" value="3" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_135-emofs2_120000-neutral_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_135-emofs2_120000-neutral" id="ID0_pv_yan_2_135-emofs2_120000-neutral_4" value="2" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_135-emofs2_120000-neutral_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ID0_pv_yan_2_135-emofs2_120000-neutral" id="ID0_pv_yan_2_135-emofs2_120000-neutral_5" value="1" required>
+                    <label class="form-check-label" for="ID0_pv_yan_2_135-emofs2_120000-neutral_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+
+            <input type="text" name="formid" value="2" hidden>
+            <input type="text" name="thank" value="Cảm ơn bạn vì đã tham gia thí nghiệm này!" hidden>
+            <input class="btn btn-info btn-lg" type="submit" value="Gửi kết quả" id="submitBtn">
+            <p class="text-muted">
+                <small>Nếu bạn thấy mình không thể thanh toán khi gửi kết quả, vui lòng quay lại và kiểm tra xem tên của bạn đã được điền chưa và mọi câu hỏi đã được trả lời chưa. Cảm ơn bạn.</small>
+            </p>
+        </form>
+    </div>
+
+    <div class="container" style="padding-top: 60px;">
+        <p class="text-center text-muted">&copy; </p>
+    </div>
+
+    <script type="text/javascript">
+        function preventRepeatedSubmission() {
+            document.getElementById('submitBtn').disabled = true;
+            setTimeout("submitBtn.disabled=false;", 5000);
+            return true;
+        };
+    </script>
+</body>
+
+</html>
