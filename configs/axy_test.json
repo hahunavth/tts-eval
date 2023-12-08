@@ -1,0 +1,41 @@
+{
+    "page_title": "axy_test",
+    "form_id": 2,
+    "questions": [
+        {
+            "name": "q1",
+            "audio_A": "/kaggle/repo/output/infer/vlsp2023emo/GroundTruth2/audio_A_1.wav",
+            "audio_X": "/kaggle/repo/output/infer/vlsp2023emo/12-07-EXP17_multi_speaker_move_emo_enc_819177ad/GiangOi2/audio_X_1.wav",
+            "audio_Y": "/kaggle/repo/output/infer/vlsp2023emo/12-07-EXP17_multi_speaker_move_emo_enc_819177ad/LMH2/audio_Y_1.wav",
+            "title": "Comparison Test 1"
+        },
+        {
+            "name": "q2",
+            "audio_A": "/kaggle/repo/output/infer/vlsp2023emo/GroundTruth2/audio_A_2.wav",
+            "audio_X": "/kaggle/repo/output/infer/vlsp2023emo/12-07-EXP17_multi_speaker_move_emo_enc_819177ad/GiangOi2/audio_X_2.wav",
+            "audio_Y": "/kaggle/repo/output/infer/vlsp2023emo/12-07-EXP17_multi_speaker_move_emo_enc_819177ad/LMH2/audio_Y_2.wav",
+            "title": "Comparison Test 2"
+        },
+        {
+            "name": "q3",
+            "audio_A": "/kaggle/repo/output/infer/vlsp2023emo/GroundTruth2/audio_A_3.wav",
+            "audio_X": "/kaggle/repo/output/infer/vlsp2023emo/12-07-EXP17_multi_speaker_move_emo_enc_819177ad/GiangOi2/audio_X_3.wav",
+            "audio_Y": "/kaggle/repo/output/infer/vlsp2023emo/12-07-EXP17_multi_speaker_move_emo_enc_819177ad/LMH2/audio_Y_3.wav",
+            "title": "Comparison Test 3"
+        },
+        {
+            "name": "q4",
+            "audio_A": "/kaggle/repo/output/infer/vlsp2023emo/GroundTruth2/audio_A_4.wav",
+            "audio_X": "/kaggle/repo/output/infer/vlsp2023emo/12-07-EXP17_multi_speaker_move_emo_enc_819177ad/GiangOi2/audio_X_4.wav",
+            "audio_Y": "/kaggle/repo/output/infer/vlsp2023emo/12-07-EXP17_multi_speaker_move_emo_enc_819177ad/LMH2/audio_Y_4.wav",
+            "title": "Comparison Test 4"
+        },
+        {
+            "name": "q5",
+            "audio_A": "/kaggle/repo/output/infer/vlsp2023emo/GroundTruth2/audio_A_5.wav",
+            "audio_X": "/kaggle/repo/output/infer/vlsp2023emo/12-07-EXP17_multi_speaker_move_emo_enc_819177ad/GiangOi2/audio_X_5.wav",
+            "audio_Y": "/kaggle/repo/output/infer/vlsp2023emo/12-07-EXP17_multi_speaker_move_emo_enc_819177ad/LMH2/audio_Y_5.wav",
+            "title": "Comparison Test 5"
+        }
+    ]
+}

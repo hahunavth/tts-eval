@@ -1,0 +1,69 @@
+{% extends "base.html.jinja2" %}
+{% block heading %}
+    <h1 class="display-4">AXY Test</h1>
+    <p class="lead">Audio Comparison Test</p>
+    <hr class="my-4">
+    <p>
+        Please listen to the three audio clips and rate the similarity of audio X (from experiment 1) and audio Y (from experiment 2) to audio A (ground truth).
+    </p>
+    <p>
+        Rate the similarity from -3 (very dissimilar) to 3 (very similar):
+    </p>
+{% endblock %}
+
+{% block form_questions %}
+    {% for question in questions %}
+        <div class="card form-group">
+            <div class="card-header">{{ question.title }}</div>
+            <div class="card-body">
+                <p>
+                    <strong>Audio A :</strong>
+                    <audio controls src="{{ question.audio_A }}">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <p>
+                    <strong>Audio X :</strong>
+                    <audio controls src="{{ question.audio_X }}">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <p>
+                    <strong>Audio Y :</strong>
+                    <audio controls src="{{ question.audio_Y }}">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="{{ question.name }}" id="{{ question.name }}_n3" value="-3" required>
+                    <label class="form-check-label" for="{{ question.name }}_n3">-3 (Very Dissimilar)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="{{ question.name }}" id="{{ question.name }}_n2" value="-2" required>
+                    <label class="form-check-label" for="{{ question.name }}_n2">-2 (Very Dissimilar)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="{{ question.name }}" id="{{ question.name }}_n1" value="-1" required>
+                    <label class="form-check-label" for="{{ question.name }}_n1">-1 (Very Dissimilar)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="{{ question.name }}" id="{{ question.name }}_0" value="0" required>
+                    <label class="form-check-label" for="{{ question.name }}_0">0 (Very Dissimilar)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="{{ question.name }}" id="{{ question.name }}_1" value="1" required>
+                    <label class="form-check-label" for="{{ question.name }}_1">1 (Very Dissimilar)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="{{ question.name }}" id="{{ question.name }}_2" value="2" required>
+                    <label class="form-check-label" for="{{ question.name }}_2">2 (Very Dissimilar)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="{{ question.name }}" id="{{ question.name }}_3" value="3" required>
+                    <label class="form-check-label" for="{{ question.name }}_3">3 (Very Similar)</label>
+                </div>
+            </div>
+            <input type="text" name="formid" value="{{ form_id }}" hidden>
+        </div>
+    {% endfor %}
+{% endblock %}

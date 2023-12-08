@@ -14,7 +14,7 @@ def main(cfg):
     assert cfg
     html = template.render(
         form_url="https://script.google.com/macros/s/AKfycbwoHjEpHLsf-h5Bd4axFzQjLWN2MeJcv728LN8A-3TAssnSq4VnLXDggI2L2LdWEAR63w/exec",
-        **cfg
+        **{k: cfg[k] for k in cfg if not k.startswith("_")}
     )
     print(html)
 

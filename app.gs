@@ -10,11 +10,11 @@ function doGet(e) {
 	Sheet.getRange(LastRow+1, 2).setValue(params.mail);
 	Sheet.getRange(LastRow+1, 3).setValue(params.formid);
 
-  var questionCount = Object.keys(params).filter(key => key.startsWith('q')).length;
+	var questionCount = Object.keys(params).filter(key => key.startsWith('q')).length;
 
-  for (var i = 1; i <= questionCount; i++) {
-    Sheet.getRange(LastRow + 1, 3 + i).setValue(params["q" + i.toString()]);
-  }
+	for (var i = 1; i <= questionCount; i++) {
+		Sheet.getRange(LastRow + 1, 3 + i).setValue(params["q" + i.toString()]);
+	}
 
 	return ContentService.createTextOutput(params.thank);
 }

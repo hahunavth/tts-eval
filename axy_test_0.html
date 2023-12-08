@@ -1,0 +1,331 @@
+<!doctype html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
+        integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            
+    <h1 class="display-4">AXY Test</h1>
+    <p class="lead">Audio Comparison Test</p>
+    <hr class="my-4">
+    <p>
+        Please listen to the three audio clips and rate the similarity of audio X (from experiment 1) and audio Y (from experiment 2) to audio A (ground truth).
+    </p>
+    <p>
+        Rate the similarity from -3 (very dissimilar) to 3 (very similar):
+    </p>
+
+        </div>
+    </div>
+
+    <div class="container" id="form_container">
+        <form id="theForm" action="https://script.google.com/macros/s/AKfycbwoHjEpHLsf-h5Bd4axFzQjLWN2MeJcv728LN8A-3TAssnSq4VnLXDggI2L2LdWEAR63w/exec" method="GET" onsubmit="return preventRepeatedSubmission();">
+            <div class="form-group">
+                <label for="name">Tên：</label>
+                <input class="form-control" type="text" inputmode="text" name="name" required>
+                <small class="form-text text-muted">Yêu cầu*</small>
+            </div>
+            <div class="form-group">
+                <label for="mail">Email：</label>
+                <input class="form-control" type="text" inputmode="email" placeholder="account@example.com" name="mail">
+                <small class="form-text text-muted">Nếu bạn thắng, chúng tôi sẽ thông báo cho bạn qua email</small>
+            </div>
+            
+    
+        <div class="card form-group">
+            <div class="card-header">Comparison Test 1</div>
+            <div class="card-body">
+                <p>
+                    <strong>Audio A :</strong>
+                    <audio controls src="/kaggle/repo/output/infer/vlsp2023emo/GroundTruth2/audio_A_1.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <p>
+                    <strong>Audio X :</strong>
+                    <audio controls src="/kaggle/repo/output/infer/vlsp2023emo/12-07-EXP17_multi_speaker_move_emo_enc_819177ad/GiangOi2/audio_X_1.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <p>
+                    <strong>Audio Y :</strong>
+                    <audio controls src="/kaggle/repo/output/infer/vlsp2023emo/12-07-EXP17_multi_speaker_move_emo_enc_819177ad/LMH2/audio_Y_1.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q1" id="q1_n3" value="-3" required>
+                    <label class="form-check-label" for="q1_n3">-3 (Very Dissimilar)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q1" id="q1_n2" value="-2" required>
+                    <label class="form-check-label" for="q1_n2">-2 (Very Dissimilar)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q1" id="q1_n1" value="-1" required>
+                    <label class="form-check-label" for="q1_n1">-1 (Very Dissimilar)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q1" id="q1_0" value="0" required>
+                    <label class="form-check-label" for="q1_0">0 (Very Dissimilar)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q1" id="q1_1" value="1" required>
+                    <label class="form-check-label" for="q1_1">1 (Very Dissimilar)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q1" id="q1_2" value="2" required>
+                    <label class="form-check-label" for="q1_2">2 (Very Dissimilar)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q1" id="q1_3" value="3" required>
+                    <label class="form-check-label" for="q1_3">3 (Very Similar)</label>
+                </div>
+            </div>
+            <input type="text" name="formid" value="2" hidden>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Comparison Test 2</div>
+            <div class="card-body">
+                <p>
+                    <strong>Audio A :</strong>
+                    <audio controls src="/kaggle/repo/output/infer/vlsp2023emo/GroundTruth2/audio_A_2.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <p>
+                    <strong>Audio X :</strong>
+                    <audio controls src="/kaggle/repo/output/infer/vlsp2023emo/12-07-EXP17_multi_speaker_move_emo_enc_819177ad/GiangOi2/audio_X_2.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <p>
+                    <strong>Audio Y :</strong>
+                    <audio controls src="/kaggle/repo/output/infer/vlsp2023emo/12-07-EXP17_multi_speaker_move_emo_enc_819177ad/LMH2/audio_Y_2.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q2" id="q2_n3" value="-3" required>
+                    <label class="form-check-label" for="q2_n3">-3 (Very Dissimilar)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q2" id="q2_n2" value="-2" required>
+                    <label class="form-check-label" for="q2_n2">-2 (Very Dissimilar)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q2" id="q2_n1" value="-1" required>
+                    <label class="form-check-label" for="q2_n1">-1 (Very Dissimilar)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q2" id="q2_0" value="0" required>
+                    <label class="form-check-label" for="q2_0">0 (Very Dissimilar)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q2" id="q2_1" value="1" required>
+                    <label class="form-check-label" for="q2_1">1 (Very Dissimilar)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q2" id="q2_2" value="2" required>
+                    <label class="form-check-label" for="q2_2">2 (Very Dissimilar)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q2" id="q2_3" value="3" required>
+                    <label class="form-check-label" for="q2_3">3 (Very Similar)</label>
+                </div>
+            </div>
+            <input type="text" name="formid" value="2" hidden>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Comparison Test 3</div>
+            <div class="card-body">
+                <p>
+                    <strong>Audio A :</strong>
+                    <audio controls src="/kaggle/repo/output/infer/vlsp2023emo/GroundTruth2/audio_A_3.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <p>
+                    <strong>Audio X :</strong>
+                    <audio controls src="/kaggle/repo/output/infer/vlsp2023emo/12-07-EXP17_multi_speaker_move_emo_enc_819177ad/GiangOi2/audio_X_3.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <p>
+                    <strong>Audio Y :</strong>
+                    <audio controls src="/kaggle/repo/output/infer/vlsp2023emo/12-07-EXP17_multi_speaker_move_emo_enc_819177ad/LMH2/audio_Y_3.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q3" id="q3_n3" value="-3" required>
+                    <label class="form-check-label" for="q3_n3">-3 (Very Dissimilar)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q3" id="q3_n2" value="-2" required>
+                    <label class="form-check-label" for="q3_n2">-2 (Very Dissimilar)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q3" id="q3_n1" value="-1" required>
+                    <label class="form-check-label" for="q3_n1">-1 (Very Dissimilar)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q3" id="q3_0" value="0" required>
+                    <label class="form-check-label" for="q3_0">0 (Very Dissimilar)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q3" id="q3_1" value="1" required>
+                    <label class="form-check-label" for="q3_1">1 (Very Dissimilar)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q3" id="q3_2" value="2" required>
+                    <label class="form-check-label" for="q3_2">2 (Very Dissimilar)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q3" id="q3_3" value="3" required>
+                    <label class="form-check-label" for="q3_3">3 (Very Similar)</label>
+                </div>
+            </div>
+            <input type="text" name="formid" value="2" hidden>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Comparison Test 4</div>
+            <div class="card-body">
+                <p>
+                    <strong>Audio A :</strong>
+                    <audio controls src="/kaggle/repo/output/infer/vlsp2023emo/GroundTruth2/audio_A_4.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <p>
+                    <strong>Audio X :</strong>
+                    <audio controls src="/kaggle/repo/output/infer/vlsp2023emo/12-07-EXP17_multi_speaker_move_emo_enc_819177ad/GiangOi2/audio_X_4.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <p>
+                    <strong>Audio Y :</strong>
+                    <audio controls src="/kaggle/repo/output/infer/vlsp2023emo/12-07-EXP17_multi_speaker_move_emo_enc_819177ad/LMH2/audio_Y_4.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q4" id="q4_n3" value="-3" required>
+                    <label class="form-check-label" for="q4_n3">-3 (Very Dissimilar)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q4" id="q4_n2" value="-2" required>
+                    <label class="form-check-label" for="q4_n2">-2 (Very Dissimilar)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q4" id="q4_n1" value="-1" required>
+                    <label class="form-check-label" for="q4_n1">-1 (Very Dissimilar)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q4" id="q4_0" value="0" required>
+                    <label class="form-check-label" for="q4_0">0 (Very Dissimilar)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q4" id="q4_1" value="1" required>
+                    <label class="form-check-label" for="q4_1">1 (Very Dissimilar)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q4" id="q4_2" value="2" required>
+                    <label class="form-check-label" for="q4_2">2 (Very Dissimilar)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q4" id="q4_3" value="3" required>
+                    <label class="form-check-label" for="q4_3">3 (Very Similar)</label>
+                </div>
+            </div>
+            <input type="text" name="formid" value="2" hidden>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Comparison Test 5</div>
+            <div class="card-body">
+                <p>
+                    <strong>Audio A :</strong>
+                    <audio controls src="/kaggle/repo/output/infer/vlsp2023emo/GroundTruth2/audio_A_5.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <p>
+                    <strong>Audio X :</strong>
+                    <audio controls src="/kaggle/repo/output/infer/vlsp2023emo/12-07-EXP17_multi_speaker_move_emo_enc_819177ad/GiangOi2/audio_X_5.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <p>
+                    <strong>Audio Y :</strong>
+                    <audio controls src="/kaggle/repo/output/infer/vlsp2023emo/12-07-EXP17_multi_speaker_move_emo_enc_819177ad/LMH2/audio_Y_5.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q5" id="q5_n3" value="-3" required>
+                    <label class="form-check-label" for="q5_n3">-3 (Very Dissimilar)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q5" id="q5_n2" value="-2" required>
+                    <label class="form-check-label" for="q5_n2">-2 (Very Dissimilar)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q5" id="q5_n1" value="-1" required>
+                    <label class="form-check-label" for="q5_n1">-1 (Very Dissimilar)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q5" id="q5_0" value="0" required>
+                    <label class="form-check-label" for="q5_0">0 (Very Dissimilar)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q5" id="q5_1" value="1" required>
+                    <label class="form-check-label" for="q5_1">1 (Very Dissimilar)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q5" id="q5_2" value="2" required>
+                    <label class="form-check-label" for="q5_2">2 (Very Dissimilar)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q5" id="q5_3" value="3" required>
+                    <label class="form-check-label" for="q5_3">3 (Very Similar)</label>
+                </div>
+            </div>
+            <input type="text" name="formid" value="2" hidden>
+        </div>
+    
+
+            <input type="text" name="formid" value="2" hidden>
+            <input type="text" name="thank" value="Cảm ơn bạn vì đã tham gia thí nghiệm này!" hidden>
+            <input class="btn btn-info btn-lg" type="submit" value="Gửi kết quả" id="submitBtn">
+            <p class="text-muted">
+                <small>Nếu bạn thấy mình không thể thanh toán khi gửi kết quả, vui lòng quay lại và kiểm tra xem tên của bạn đã được điền chưa và mọi câu hỏi đã được trả lời chưa. Cảm ơn bạn.</small>
+            </p>
+        </form>
+    </div>
+
+    <div class="container" style="padding-top: 60px;">
+        <p class="text-center text-muted">&copy; </p>
+    </div>
+
+    <script type="text/javascript">
+        function preventRepeatedSubmission() {
+            document.getElementById('submitBtn').disabled = true;
+            setTimeout("submitBtn.disabled=false;", 5000);
+            return true;
+        };
+    </script>
+</body>
+
+</html>
