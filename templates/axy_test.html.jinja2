@@ -1,10 +1,26 @@
 {% extends "base.html.jinja2" %}
 {% block heading %}
     <h1 class="display-4">AXY Test</h1>
-    <p class="lead">Audio Comparison Test</p>
+    <p class="lead">Đánh giá chất lượng giọng nói tổng hợp</p>
     <hr class="my-4">
     <p>
-        Please listen to the three audio clips and rate the similarity of audio X (from experiment 1) and audio Y (from experiment 2) to audio A (ground truth).
+        Tiêu chí đánh giá là sự giống nhau về <b>Cảm xúc (Emotion)</b> giữa A và X, A và Y.
+        <br>
+        Với mỗi câu hỏi, bạn được cung cấp 3 đoạn âm thanh: A, X và Y.
+        <br>
+        Hãy nghe 3 đoạn âm thanh trên và đánh giá mức độ tương đồng giữa A và X, A và Y.
+        Sau đó hãy chọn 1 trong 7 mức đánh giá:
+        <ul>
+            <li> -3 (X rất giống A, Y rất khác A) </li>
+            <li> -2 (X giống A, Y khác A) </li>
+            <li> -1 (X hơi giống A, Y hơi khác A) </li>
+            <li> 0 (so sánh với A thì X, Y như nhau (có thể cùng giống hoặc cùng khác)) </li>
+            <li> 1 (X hơi khác A, Y hơi giống A) </li>
+            <li> 2 (X khác A, Y giống A) </li>
+            <li> 3 (X rất khác A, Y rất giống A) </li>
+        </ul>
+
+
     </p>
     <p>
         Rate the similarity from -3 (very dissimilar) to 3 (very similar):
@@ -36,31 +52,31 @@
                 </p>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="{{ question.name }}" id="{{ question.name }}_n3" value="-3" required>
-                    <label class="form-check-label" for="{{ question.name }}_n3">-3 (Very Dissimilar)</label>
+                    <label class="form-check-label" for="{{ question.name }}_n3">-3 (X rất giống A, Y rất khác A)</label>
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="{{ question.name }}" id="{{ question.name }}_n2" value="-2" required>
-                    <label class="form-check-label" for="{{ question.name }}_n2">-2 (Very Dissimilar)</label>
+                    <label class="form-check-label" for="{{ question.name }}_n2">-2 </label>
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="{{ question.name }}" id="{{ question.name }}_n1" value="-1" required>
-                    <label class="form-check-label" for="{{ question.name }}_n1">-1 (Very Dissimilar)</label>
+                    <label class="form-check-label" for="{{ question.name }}_n1">-1 </label>
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="{{ question.name }}" id="{{ question.name }}_0" value="0" required>
-                    <label class="form-check-label" for="{{ question.name }}_0">0 (Very Dissimilar)</label>
+                    <label class="form-check-label" for="{{ question.name }}_0">0 (so sánh với A thì X, Y như nhau (có thể cùng giống hoặc cùng khác))</label>
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="{{ question.name }}" id="{{ question.name }}_1" value="1" required>
-                    <label class="form-check-label" for="{{ question.name }}_1">1 (Very Dissimilar)</label>
+                    <label class="form-check-label" for="{{ question.name }}_1">1 </label>
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="{{ question.name }}" id="{{ question.name }}_2" value="2" required>
-                    <label class="form-check-label" for="{{ question.name }}_2">2 (Very Dissimilar)</label>
+                    <label class="form-check-label" for="{{ question.name }}_2">2 </label>
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="{{ question.name }}" id="{{ question.name }}_3" value="3" required>
-                    <label class="form-check-label" for="{{ question.name }}_3">3 (Very Similar)</label>
+                    <label class="form-check-label" for="{{ question.name }}_3">3 (X rất khác A, Y rất giống A)</label>
                 </div>
             </div>
             <input type="text" name="formid" value="{{ form_id }}" hidden>

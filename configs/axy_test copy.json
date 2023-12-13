@@ -17,6 +17,13 @@
             "title": 7
         },
         {
+            "name": "q3",
+            "audio_A": "axy_wavs/ground_truth+giangoi/neu_val_000214_neutral.wav",
+            "audio_X": "axy_wavs/multi_spk+move_emo+giangoi/neu_val_000214-emofs2_150000-neutral.wav",
+            "audio_Y": "axy_wavs/multi_spk+giangoi/neu_val_000214-emofs2_150000-neutral.wav",
+            "title": 3
+        },
+        {
             "name": "q9",
             "audio_A": "axy_wavs/ground_truth+giangoi/emo_val_001694_neutral.wav",
             "audio_X": "axy_wavs/multi_spk+giangoi/emo_val_001694-emofs2_150000-neutral.wav",
@@ -45,6 +52,13 @@
             "title": 11
         },
         {
+            "name": "q6",
+            "audio_A": "axy_wavs/ground_truth+giangoi/neu_val_005028_neutral.wav",
+            "audio_X": "axy_wavs/multi_spk+giangoi/neu_val_005028-emofs2_150000-neutral.wav",
+            "audio_Y": "axy_wavs/multi_spk+move_emo+giangoi/neu_val_005028-emofs2_150000-neutral.wav",
+            "title": 6
+        },
+        {
             "name": "q13",
             "audio_A": "axy_wavs/ground_truth+giangoi/emo_val_005212_sad.wav",
             "audio_X": "axy_wavs/finetune+giangoi/emo_val_005212-emofs2_158000-sad.wav",
@@ -59,6 +73,13 @@
             "title": 12
         },
         {
+            "name": "q2",
+            "audio_A": "axy_wavs/ground_truth+giangoi/neu_val_000214_neutral.wav",
+            "audio_X": "axy_wavs/multi_spk+move_emo+giangoi/neu_val_000214-emofs2_150000-neutral.wav",
+            "audio_Y": "axy_wavs/finetune+giangoi/neu_val_000214-emofs2_158000-neutral.wav",
+            "title": 2
+        },
+        {
             "name": "q16",
             "audio_A": "axy_wavs/ground_truth+giangoi/emo_val_001627_happy.wav",
             "audio_X": "axy_wavs/multi_spk+giangoi/emo_val_001627-emofs2_150000-happy.wav",
@@ -66,11 +87,25 @@
             "title": 16
         },
         {
+            "name": "q1",
+            "audio_A": "axy_wavs/ground_truth+giangoi/neu_val_000214_neutral.wav",
+            "audio_X": "axy_wavs/finetune+giangoi/neu_val_000214-emofs2_158000-neutral.wav",
+            "audio_Y": "axy_wavs/multi_spk+giangoi/neu_val_000214-emofs2_150000-neutral.wav",
+            "title": 1
+        },
+        {
             "name": "q8",
             "audio_A": "axy_wavs/ground_truth+giangoi/emo_val_001694_neutral.wav",
             "audio_X": "axy_wavs/multi_spk+move_emo+giangoi/emo_val_001694-emofs2_150000-neutral.wav",
             "audio_Y": "axy_wavs/multi_spk+giangoi/emo_val_001694-emofs2_150000-neutral.wav",
             "title": 8
+        },
+        {
+            "name": "q4",
+            "audio_A": "axy_wavs/ground_truth+giangoi/neu_val_005028_neutral.wav",
+            "audio_X": "axy_wavs/multi_spk+giangoi/neu_val_005028-emofs2_150000-neutral.wav",
+            "audio_Y": "axy_wavs/finetune+giangoi/neu_val_005028-emofs2_158000-neutral.wav",
+            "title": 4
         },
         {
             "name": "q17",
@@ -99,6 +134,13 @@
             "audio_X": "axy_wavs/multi_spk+giangoi/emo_val_001627-emofs2_150000-happy.wav",
             "audio_Y": "axy_wavs/multi_spk+move_emo+giangoi/emo_val_001627-emofs2_150000-happy.wav",
             "title": 18
+        },
+        {
+            "name": "q5",
+            "audio_A": "axy_wavs/ground_truth+giangoi/neu_val_005028_neutral.wav",
+            "audio_X": "axy_wavs/multi_spk+move_emo+giangoi/neu_val_005028-emofs2_150000-neutral.wav",
+            "audio_Y": "axy_wavs/multi_spk+giangoi/neu_val_005028-emofs2_150000-neutral.wav",
+            "title": 5
         },
         {
             "name": "q15",

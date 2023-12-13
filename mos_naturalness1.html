@@ -1,0 +1,916 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>mos_naturalness_finetune_vs_multi_spk</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
+        integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            
+    <h1 class="display-4">MOS Test</h1>
+    <p class="lead">Đánh giá chất lượng giọng nói tổng hợp</p>
+    <hr class="my-4">
+    <p>
+        Cảm ơn bạn đã tham gia thí nghiệm này!
+    </p>
+    <p>
+        Trong thí nghiệm này, chúng tôi sử dụng máy tính để tổng hợp giọng nói của con người. 
+        Tệp âm thanh sau đây chứa các bản ghi âm thực và giọng nói tổng hợp, đồng thời mỗi câu đều có kèm theo bản ghi. 
+        <hr>
+        <div>
+            Tập trung vào tiêu chí <b>naturalness</b>: Đánh giá dựa trên độ tự nhiên của giọng nói, không phải về nội dung, thông điệp hay cảm xúc của câu nói.
+        </div>
+        Yêu cầu các đối tượng nghe bằng tai nghe và đưa ra các đánh giá sau dựa trên chất lượng của từng tệp âm thanh:
+        <ul>
+            <li>１ (rất tệ)</li>
+            <li>２ (không tốt)</li>
+            <li>３ (bình thường)</li>
+            <li>４ (tốt)</li>
+            <li>５ (rất tốt)</li>
+        </ul>
+    </p>
+
+        </div>
+    </div>
+
+    <div class="container" id="form_container">
+        <form id="theForm" action="https://script.google.com/macros/s/AKfycbwoHjEpHLsf-h5Bd4axFzQjLWN2MeJcv728LN8A-3TAssnSq4VnLXDggI2L2LdWEAR63w/exec" method="GET" onsubmit="return preventRepeatedSubmission();">
+            <div class="form-group">
+                <label for="name">Tên：</label>
+                <input class="form-control" type="text" inputmode="text" name="name" required>
+                <small class="form-text text-muted">Yêu cầu*</small>
+            </div>
+            <div class="form-group">
+                <label for="mail">Email：</label>
+                <input class="form-control" type="text" inputmode="email" placeholder="account@example.com" name="mail">
+                <small class="form-text text-muted">Nếu bạn thắng, chúng tôi sẽ thông báo cho bạn qua email</small>
+            </div>
+            
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 1</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/finetune+giangoi/other_000000-emofs2_158000-angry.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q1" id="q1_1" value="5" required>
+                    <label class="form-check-label" for="q1_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q1" id="q1_2" value="4" required>
+                    <label class="form-check-label" for="q1_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q1" id="q1_3" value="3" required>
+                    <label class="form-check-label" for="q1_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q1" id="q1_4" value="2" required>
+                    <label class="form-check-label" for="q1_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q1" id="q1_5" value="1" required>
+                    <label class="form-check-label" for="q1_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 2</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/multi_spk+move_emo+giangoi/emo_val_001627-emofs2_150000-happy.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q2" id="q2_1" value="5" required>
+                    <label class="form-check-label" for="q2_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q2" id="q2_2" value="4" required>
+                    <label class="form-check-label" for="q2_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q2" id="q2_3" value="3" required>
+                    <label class="form-check-label" for="q2_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q2" id="q2_4" value="2" required>
+                    <label class="form-check-label" for="q2_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q2" id="q2_5" value="1" required>
+                    <label class="form-check-label" for="q2_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 3</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/finetune+giangoi/neu_val_000214-emofs2_158000-surprise.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q3" id="q3_1" value="5" required>
+                    <label class="form-check-label" for="q3_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q3" id="q3_2" value="4" required>
+                    <label class="form-check-label" for="q3_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q3" id="q3_3" value="3" required>
+                    <label class="form-check-label" for="q3_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q3" id="q3_4" value="2" required>
+                    <label class="form-check-label" for="q3_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q3" id="q3_5" value="1" required>
+                    <label class="form-check-label" for="q3_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 4</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/finetune+giangoi/emo_val_004700-emofs2_158000-surprise.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q4" id="q4_1" value="5" required>
+                    <label class="form-check-label" for="q4_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q4" id="q4_2" value="4" required>
+                    <label class="form-check-label" for="q4_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q4" id="q4_3" value="3" required>
+                    <label class="form-check-label" for="q4_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q4" id="q4_4" value="2" required>
+                    <label class="form-check-label" for="q4_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q4" id="q4_5" value="1" required>
+                    <label class="form-check-label" for="q4_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 5</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/multi_spk+move_emo+giangoi/other_000000-emofs2_150000-angry.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q5" id="q5_1" value="5" required>
+                    <label class="form-check-label" for="q5_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q5" id="q5_2" value="4" required>
+                    <label class="form-check-label" for="q5_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q5" id="q5_3" value="3" required>
+                    <label class="form-check-label" for="q5_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q5" id="q5_4" value="2" required>
+                    <label class="form-check-label" for="q5_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q5" id="q5_5" value="1" required>
+                    <label class="form-check-label" for="q5_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 6</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/finetune+giangoi/emo_val_005212-emofs2_158000-happy.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q6" id="q6_1" value="5" required>
+                    <label class="form-check-label" for="q6_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q6" id="q6_2" value="4" required>
+                    <label class="form-check-label" for="q6_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q6" id="q6_3" value="3" required>
+                    <label class="form-check-label" for="q6_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q6" id="q6_4" value="2" required>
+                    <label class="form-check-label" for="q6_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q6" id="q6_5" value="1" required>
+                    <label class="form-check-label" for="q6_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 7</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/multi_spk+giangoi/neu_val_000214-emofs2_150000-surprise.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q7" id="q7_1" value="5" required>
+                    <label class="form-check-label" for="q7_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q7" id="q7_2" value="4" required>
+                    <label class="form-check-label" for="q7_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q7" id="q7_3" value="3" required>
+                    <label class="form-check-label" for="q7_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q7" id="q7_4" value="2" required>
+                    <label class="form-check-label" for="q7_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q7" id="q7_5" value="1" required>
+                    <label class="form-check-label" for="q7_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 8</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/multi_spk+move_emo+giangoi/neu_val_000214-emofs2_150000-surprise.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q8" id="q8_1" value="5" required>
+                    <label class="form-check-label" for="q8_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q8" id="q8_2" value="4" required>
+                    <label class="form-check-label" for="q8_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q8" id="q8_3" value="3" required>
+                    <label class="form-check-label" for="q8_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q8" id="q8_4" value="2" required>
+                    <label class="form-check-label" for="q8_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q8" id="q8_5" value="1" required>
+                    <label class="form-check-label" for="q8_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 9</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/multi_spk+giangoi/emo_val_001120-emofs2_150000-sad.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q9" id="q9_1" value="5" required>
+                    <label class="form-check-label" for="q9_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q9" id="q9_2" value="4" required>
+                    <label class="form-check-label" for="q9_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q9" id="q9_3" value="3" required>
+                    <label class="form-check-label" for="q9_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q9" id="q9_4" value="2" required>
+                    <label class="form-check-label" for="q9_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q9" id="q9_5" value="1" required>
+                    <label class="form-check-label" for="q9_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 10</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/finetune+giangoi/emo_val_001694-emofs2_158000-angry.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q10" id="q10_1" value="5" required>
+                    <label class="form-check-label" for="q10_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q10" id="q10_2" value="4" required>
+                    <label class="form-check-label" for="q10_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q10" id="q10_3" value="3" required>
+                    <label class="form-check-label" for="q10_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q10" id="q10_4" value="2" required>
+                    <label class="form-check-label" for="q10_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q10" id="q10_5" value="1" required>
+                    <label class="form-check-label" for="q10_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 11</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/multi_spk+giangoi/emo_val_005212-emofs2_150000-happy.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q11" id="q11_1" value="5" required>
+                    <label class="form-check-label" for="q11_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q11" id="q11_2" value="4" required>
+                    <label class="form-check-label" for="q11_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q11" id="q11_3" value="3" required>
+                    <label class="form-check-label" for="q11_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q11" id="q11_4" value="2" required>
+                    <label class="form-check-label" for="q11_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q11" id="q11_5" value="1" required>
+                    <label class="form-check-label" for="q11_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 12</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/multi_spk+giangoi/emo_val_004700-emofs2_150000-surprise.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q12" id="q12_1" value="5" required>
+                    <label class="form-check-label" for="q12_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q12" id="q12_2" value="4" required>
+                    <label class="form-check-label" for="q12_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q12" id="q12_3" value="3" required>
+                    <label class="form-check-label" for="q12_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q12" id="q12_4" value="2" required>
+                    <label class="form-check-label" for="q12_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q12" id="q12_5" value="1" required>
+                    <label class="form-check-label" for="q12_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 13</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/multi_spk+giangoi/neu_val_005028-emofs2_150000-surprise.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q13" id="q13_1" value="5" required>
+                    <label class="form-check-label" for="q13_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q13" id="q13_2" value="4" required>
+                    <label class="form-check-label" for="q13_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q13" id="q13_3" value="3" required>
+                    <label class="form-check-label" for="q13_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q13" id="q13_4" value="2" required>
+                    <label class="form-check-label" for="q13_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q13" id="q13_5" value="1" required>
+                    <label class="form-check-label" for="q13_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 14</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/multi_spk+giangoi/emo_val_001627-emofs2_150000-happy.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q14" id="q14_1" value="5" required>
+                    <label class="form-check-label" for="q14_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q14" id="q14_2" value="4" required>
+                    <label class="form-check-label" for="q14_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q14" id="q14_3" value="3" required>
+                    <label class="form-check-label" for="q14_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q14" id="q14_4" value="2" required>
+                    <label class="form-check-label" for="q14_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q14" id="q14_5" value="1" required>
+                    <label class="form-check-label" for="q14_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 15</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/multi_spk+move_emo+giangoi/emo_val_001694-emofs2_150000-angry.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q15" id="q15_1" value="5" required>
+                    <label class="form-check-label" for="q15_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q15" id="q15_2" value="4" required>
+                    <label class="form-check-label" for="q15_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q15" id="q15_3" value="3" required>
+                    <label class="form-check-label" for="q15_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q15" id="q15_4" value="2" required>
+                    <label class="form-check-label" for="q15_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q15" id="q15_5" value="1" required>
+                    <label class="form-check-label" for="q15_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 16</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/multi_spk+giangoi/other_000000-emofs2_150000-angry.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q16" id="q16_1" value="5" required>
+                    <label class="form-check-label" for="q16_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q16" id="q16_2" value="4" required>
+                    <label class="form-check-label" for="q16_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q16" id="q16_3" value="3" required>
+                    <label class="form-check-label" for="q16_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q16" id="q16_4" value="2" required>
+                    <label class="form-check-label" for="q16_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q16" id="q16_5" value="1" required>
+                    <label class="form-check-label" for="q16_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 17</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/finetune+giangoi/emo_val_001120-emofs2_158000-sad.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q17" id="q17_1" value="5" required>
+                    <label class="form-check-label" for="q17_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q17" id="q17_2" value="4" required>
+                    <label class="form-check-label" for="q17_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q17" id="q17_3" value="3" required>
+                    <label class="form-check-label" for="q17_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q17" id="q17_4" value="2" required>
+                    <label class="form-check-label" for="q17_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q17" id="q17_5" value="1" required>
+                    <label class="form-check-label" for="q17_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 18</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/multi_spk+move_emo+giangoi/neu_val_005028-emofs2_150000-surprise.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q18" id="q18_1" value="5" required>
+                    <label class="form-check-label" for="q18_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q18" id="q18_2" value="4" required>
+                    <label class="form-check-label" for="q18_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q18" id="q18_3" value="3" required>
+                    <label class="form-check-label" for="q18_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q18" id="q18_4" value="2" required>
+                    <label class="form-check-label" for="q18_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q18" id="q18_5" value="1" required>
+                    <label class="form-check-label" for="q18_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 19</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/multi_spk+giangoi/emo_val_001694-emofs2_150000-angry.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q19" id="q19_1" value="5" required>
+                    <label class="form-check-label" for="q19_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q19" id="q19_2" value="4" required>
+                    <label class="form-check-label" for="q19_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q19" id="q19_3" value="3" required>
+                    <label class="form-check-label" for="q19_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q19" id="q19_4" value="2" required>
+                    <label class="form-check-label" for="q19_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q19" id="q19_5" value="1" required>
+                    <label class="form-check-label" for="q19_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 20</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/finetune+giangoi/emo_val_001627-emofs2_158000-happy.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q20" id="q20_1" value="5" required>
+                    <label class="form-check-label" for="q20_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q20" id="q20_2" value="4" required>
+                    <label class="form-check-label" for="q20_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q20" id="q20_3" value="3" required>
+                    <label class="form-check-label" for="q20_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q20" id="q20_4" value="2" required>
+                    <label class="form-check-label" for="q20_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q20" id="q20_5" value="1" required>
+                    <label class="form-check-label" for="q20_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 21</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/multi_spk+giangoi/neu_val_007215-emofs2_150000-neutral.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q21" id="q21_1" value="5" required>
+                    <label class="form-check-label" for="q21_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q21" id="q21_2" value="4" required>
+                    <label class="form-check-label" for="q21_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q21" id="q21_3" value="3" required>
+                    <label class="form-check-label" for="q21_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q21" id="q21_4" value="2" required>
+                    <label class="form-check-label" for="q21_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q21" id="q21_5" value="1" required>
+                    <label class="form-check-label" for="q21_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 22</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/multi_spk+move_emo+giangoi/emo_val_004700-emofs2_150000-surprise.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q22" id="q22_1" value="5" required>
+                    <label class="form-check-label" for="q22_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q22" id="q22_2" value="4" required>
+                    <label class="form-check-label" for="q22_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q22" id="q22_3" value="3" required>
+                    <label class="form-check-label" for="q22_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q22" id="q22_4" value="2" required>
+                    <label class="form-check-label" for="q22_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q22" id="q22_5" value="1" required>
+                    <label class="form-check-label" for="q22_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 23</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/multi_spk+move_emo+giangoi/emo_val_005212-emofs2_150000-happy.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q23" id="q23_1" value="5" required>
+                    <label class="form-check-label" for="q23_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q23" id="q23_2" value="4" required>
+                    <label class="form-check-label" for="q23_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q23" id="q23_3" value="3" required>
+                    <label class="form-check-label" for="q23_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q23" id="q23_4" value="2" required>
+                    <label class="form-check-label" for="q23_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q23" id="q23_5" value="1" required>
+                    <label class="form-check-label" for="q23_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 24</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/finetune+giangoi/neu_val_007215-emofs2_158000-neutral.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q24" id="q24_1" value="5" required>
+                    <label class="form-check-label" for="q24_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q24" id="q24_2" value="4" required>
+                    <label class="form-check-label" for="q24_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q24" id="q24_3" value="3" required>
+                    <label class="form-check-label" for="q24_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q24" id="q24_4" value="2" required>
+                    <label class="form-check-label" for="q24_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q24" id="q24_5" value="1" required>
+                    <label class="form-check-label" for="q24_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 25</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/multi_spk+move_emo+giangoi/emo_val_001120-emofs2_150000-sad.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q25" id="q25_1" value="5" required>
+                    <label class="form-check-label" for="q25_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q25" id="q25_2" value="4" required>
+                    <label class="form-check-label" for="q25_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q25" id="q25_3" value="3" required>
+                    <label class="form-check-label" for="q25_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q25" id="q25_4" value="2" required>
+                    <label class="form-check-label" for="q25_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q25" id="q25_5" value="1" required>
+                    <label class="form-check-label" for="q25_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 26</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/finetune+giangoi/neu_val_005028-emofs2_158000-surprise.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q26" id="q26_1" value="5" required>
+                    <label class="form-check-label" for="q26_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q26" id="q26_2" value="4" required>
+                    <label class="form-check-label" for="q26_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q26" id="q26_3" value="3" required>
+                    <label class="form-check-label" for="q26_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q26" id="q26_4" value="2" required>
+                    <label class="form-check-label" for="q26_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q26" id="q26_5" value="1" required>
+                    <label class="form-check-label" for="q26_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">Câu hỏi 27</div>
+            <div class="card-body">
+                <p>
+                    <audio controls src="./wavs/multi_spk+move_emo+giangoi/neu_val_007215-emofs2_150000-neutral.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q27" id="q27_1" value="5" required>
+                    <label class="form-check-label" for="q27_1">５ (rất tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q27" id="q27_2" value="4" required>
+                    <label class="form-check-label" for="q27_2">４ (tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q27" id="q27_3" value="3" required>
+                    <label class="form-check-label" for="q27_3">３ (bình thường)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q27" id="q27_4" value="2" required>
+                    <label class="form-check-label" for="q27_4">２ (không tốt)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q27" id="q27_5" value="1" required>
+                    <label class="form-check-label" for="q27_5">１ (rất tệ)</label>
+                </div>
+            </div>
+        </div>
+    
+
+            <input type="text" name="formid" value="1" hidden>
+            <input type="text" name="thank" value="Cảm ơn bạn vì đã tham gia thí nghiệm này!" hidden>
+            <input class="btn btn-info btn-lg" type="submit" value="Gửi kết quả" id="submitBtn">
+            <p class="text-muted">
+                <small>Nếu bạn thấy mình không thể thanh toán khi gửi kết quả, vui lòng quay lại và kiểm tra xem tên của bạn đã được điền chưa và mọi câu hỏi đã được trả lời chưa. Cảm ơn bạn.</small>
+            </p>
+        </form>
+    </div>
+
+    <div class="container" style="padding-top: 60px;">
+        <p class="text-center text-muted">&copy; </p>
+    </div>
+
+    <script type="text/javascript">
+        function preventRepeatedSubmission() {
+            document.getElementById('submitBtn').disabled = true;
+            setTimeout("submitBtn.disabled=false;", 5000);
+            return true;
+        };
+    </script>
+</body>
+
+</html>

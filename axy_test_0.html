@@ -14,10 +14,26 @@
         <div class="container">
             
     <h1 class="display-4">AXY Test</h1>
-    <p class="lead">Audio Comparison Test</p>
+    <p class="lead">Đánh giá chất lượng giọng nói tổng hợp</p>
     <hr class="my-4">
     <p>
-        Please listen to the three audio clips and rate the similarity of audio X (from experiment 1) and audio Y (from experiment 2) to audio A (ground truth).
+        Tiêu chí đánh giá là sự giống nhau về <b>Cảm xúc (Emotion)</b> giữa A và X, A và Y.
+        <br>
+        Với mỗi câu hỏi, bạn được cung cấp 3 đoạn âm thanh: A, X và Y.
+        <br>
+        Hãy nghe 3 đoạn âm thanh trên và đánh giá mức độ tương đồng giữa A và X, A và Y.
+        Sau đó hãy chọn 1 trong 7 mức đánh giá:
+        <ul>
+            <li> -3 (X rất giống A, Y rất khác A) </li>
+            <li> -2 (X giống A, Y khác A) </li>
+            <li> -1 (X hơi giống A, Y hơi khác A) </li>
+            <li> 0 (so sánh với A thì X, Y như nhau (có thể cùng giống hoặc cùng khác)) </li>
+            <li> 1 (X hơi khác A, Y hơi giống A) </li>
+            <li> 2 (X khác A, Y giống A) </li>
+            <li> 3 (X rất khác A, Y rất giống A) </li>
+        </ul>
+
+
     </p>
     <p>
         Rate the similarity from -3 (very dissimilar) to 3 (very similar):
@@ -41,272 +57,802 @@
             
     
         <div class="card form-group">
-            <div class="card-header">Comparison Test 1</div>
+            <div class="card-header">10</div>
             <div class="card-body">
                 <p>
                     <strong>Audio A :</strong>
-                    <audio controls src="/kaggle/repo/output/infer/vlsp2023emo/GroundTruth2/audio_A_1.wav">
+                    <audio controls src="axy_wavs/ground_truth+giangoi/emo_val_004700_angry.wav">
                         Your browser does not support the audio element.
                     </audio>
                 </p>
                 <p>
                     <strong>Audio X :</strong>
-                    <audio controls src="/kaggle/repo/output/infer/vlsp2023emo/12-07-EXP17_multi_speaker_move_emo_enc_819177ad/GiangOi2/audio_X_1.wav">
+                    <audio controls src="axy_wavs/multi_spk+giangoi/emo_val_004700-emofs2_150000-angry.wav">
                         Your browser does not support the audio element.
                     </audio>
                 </p>
                 <p>
                     <strong>Audio Y :</strong>
-                    <audio controls src="/kaggle/repo/output/infer/vlsp2023emo/12-07-EXP17_multi_speaker_move_emo_enc_819177ad/LMH2/audio_Y_1.wav">
+                    <audio controls src="axy_wavs/finetune+giangoi/emo_val_004700-emofs2_158000-angry.wav">
                         Your browser does not support the audio element.
                     </audio>
                 </p>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q1" id="q1_n3" value="-3" required>
-                    <label class="form-check-label" for="q1_n3">-3 (Very Dissimilar)</label>
+                    <input class="form-check-input" type="radio" name="q10" id="q10_n3" value="-3" required>
+                    <label class="form-check-label" for="q10_n3">-3 (X rất giống A, Y rất khác A)</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q1" id="q1_n2" value="-2" required>
-                    <label class="form-check-label" for="q1_n2">-2 (Very Dissimilar)</label>
+                    <input class="form-check-input" type="radio" name="q10" id="q10_n2" value="-2" required>
+                    <label class="form-check-label" for="q10_n2">-2 </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q1" id="q1_n1" value="-1" required>
-                    <label class="form-check-label" for="q1_n1">-1 (Very Dissimilar)</label>
+                    <input class="form-check-input" type="radio" name="q10" id="q10_n1" value="-1" required>
+                    <label class="form-check-label" for="q10_n1">-1 </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q1" id="q1_0" value="0" required>
-                    <label class="form-check-label" for="q1_0">0 (Very Dissimilar)</label>
+                    <input class="form-check-input" type="radio" name="q10" id="q10_0" value="0" required>
+                    <label class="form-check-label" for="q10_0">0 (so sánh với A thì X, Y như nhau (có thể cùng giống hoặc cùng khác))</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q1" id="q1_1" value="1" required>
-                    <label class="form-check-label" for="q1_1">1 (Very Dissimilar)</label>
+                    <input class="form-check-input" type="radio" name="q10" id="q10_1" value="1" required>
+                    <label class="form-check-label" for="q10_1">1 </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q1" id="q1_2" value="2" required>
-                    <label class="form-check-label" for="q1_2">2 (Very Dissimilar)</label>
+                    <input class="form-check-input" type="radio" name="q10" id="q10_2" value="2" required>
+                    <label class="form-check-label" for="q10_2">2 </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q1" id="q1_3" value="3" required>
-                    <label class="form-check-label" for="q1_3">3 (Very Similar)</label>
+                    <input class="form-check-input" type="radio" name="q10" id="q10_3" value="3" required>
+                    <label class="form-check-label" for="q10_3">3 (X rất khác A, Y rất giống A)</label>
                 </div>
             </div>
-            <input type="text" name="formid" value="2" hidden>
+            <input type="text" name="formid" value="1" hidden>
         </div>
     
         <div class="card form-group">
-            <div class="card-header">Comparison Test 2</div>
+            <div class="card-header">7</div>
             <div class="card-body">
                 <p>
                     <strong>Audio A :</strong>
-                    <audio controls src="/kaggle/repo/output/infer/vlsp2023emo/GroundTruth2/audio_A_2.wav">
+                    <audio controls src="axy_wavs/ground_truth+giangoi/emo_val_001694_neutral.wav">
                         Your browser does not support the audio element.
                     </audio>
                 </p>
                 <p>
                     <strong>Audio X :</strong>
-                    <audio controls src="/kaggle/repo/output/infer/vlsp2023emo/12-07-EXP17_multi_speaker_move_emo_enc_819177ad/GiangOi2/audio_X_2.wav">
+                    <audio controls src="axy_wavs/multi_spk+giangoi/emo_val_001694-emofs2_150000-neutral.wav">
                         Your browser does not support the audio element.
                     </audio>
                 </p>
                 <p>
                     <strong>Audio Y :</strong>
-                    <audio controls src="/kaggle/repo/output/infer/vlsp2023emo/12-07-EXP17_multi_speaker_move_emo_enc_819177ad/LMH2/audio_Y_2.wav">
+                    <audio controls src="axy_wavs/finetune+giangoi/emo_val_001694-emofs2_158000-neutral.wav">
                         Your browser does not support the audio element.
                     </audio>
                 </p>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q2" id="q2_n3" value="-3" required>
-                    <label class="form-check-label" for="q2_n3">-3 (Very Dissimilar)</label>
+                    <input class="form-check-input" type="radio" name="q7" id="q7_n3" value="-3" required>
+                    <label class="form-check-label" for="q7_n3">-3 (X rất giống A, Y rất khác A)</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q2" id="q2_n2" value="-2" required>
-                    <label class="form-check-label" for="q2_n2">-2 (Very Dissimilar)</label>
+                    <input class="form-check-input" type="radio" name="q7" id="q7_n2" value="-2" required>
+                    <label class="form-check-label" for="q7_n2">-2 </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q2" id="q2_n1" value="-1" required>
-                    <label class="form-check-label" for="q2_n1">-1 (Very Dissimilar)</label>
+                    <input class="form-check-input" type="radio" name="q7" id="q7_n1" value="-1" required>
+                    <label class="form-check-label" for="q7_n1">-1 </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q2" id="q2_0" value="0" required>
-                    <label class="form-check-label" for="q2_0">0 (Very Dissimilar)</label>
+                    <input class="form-check-input" type="radio" name="q7" id="q7_0" value="0" required>
+                    <label class="form-check-label" for="q7_0">0 (so sánh với A thì X, Y như nhau (có thể cùng giống hoặc cùng khác))</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q2" id="q2_1" value="1" required>
-                    <label class="form-check-label" for="q2_1">1 (Very Dissimilar)</label>
+                    <input class="form-check-input" type="radio" name="q7" id="q7_1" value="1" required>
+                    <label class="form-check-label" for="q7_1">1 </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q2" id="q2_2" value="2" required>
-                    <label class="form-check-label" for="q2_2">2 (Very Dissimilar)</label>
+                    <input class="form-check-input" type="radio" name="q7" id="q7_2" value="2" required>
+                    <label class="form-check-label" for="q7_2">2 </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q2" id="q2_3" value="3" required>
-                    <label class="form-check-label" for="q2_3">3 (Very Similar)</label>
+                    <input class="form-check-input" type="radio" name="q7" id="q7_3" value="3" required>
+                    <label class="form-check-label" for="q7_3">3 (X rất khác A, Y rất giống A)</label>
                 </div>
             </div>
-            <input type="text" name="formid" value="2" hidden>
+            <input type="text" name="formid" value="1" hidden>
         </div>
     
         <div class="card form-group">
-            <div class="card-header">Comparison Test 3</div>
+            <div class="card-header">9</div>
             <div class="card-body">
                 <p>
                     <strong>Audio A :</strong>
-                    <audio controls src="/kaggle/repo/output/infer/vlsp2023emo/GroundTruth2/audio_A_3.wav">
+                    <audio controls src="axy_wavs/ground_truth+giangoi/emo_val_001694_neutral.wav">
                         Your browser does not support the audio element.
                     </audio>
                 </p>
                 <p>
                     <strong>Audio X :</strong>
-                    <audio controls src="/kaggle/repo/output/infer/vlsp2023emo/12-07-EXP17_multi_speaker_move_emo_enc_819177ad/GiangOi2/audio_X_3.wav">
+                    <audio controls src="axy_wavs/multi_spk+giangoi/emo_val_001694-emofs2_150000-neutral.wav">
                         Your browser does not support the audio element.
                     </audio>
                 </p>
                 <p>
                     <strong>Audio Y :</strong>
-                    <audio controls src="/kaggle/repo/output/infer/vlsp2023emo/12-07-EXP17_multi_speaker_move_emo_enc_819177ad/LMH2/audio_Y_3.wav">
+                    <audio controls src="axy_wavs/multi_spk+move_emo+giangoi/emo_val_001694-emofs2_150000-neutral.wav">
                         Your browser does not support the audio element.
                     </audio>
                 </p>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q3" id="q3_n3" value="-3" required>
-                    <label class="form-check-label" for="q3_n3">-3 (Very Dissimilar)</label>
+                    <input class="form-check-input" type="radio" name="q9" id="q9_n3" value="-3" required>
+                    <label class="form-check-label" for="q9_n3">-3 (X rất giống A, Y rất khác A)</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q3" id="q3_n2" value="-2" required>
-                    <label class="form-check-label" for="q3_n2">-2 (Very Dissimilar)</label>
+                    <input class="form-check-input" type="radio" name="q9" id="q9_n2" value="-2" required>
+                    <label class="form-check-label" for="q9_n2">-2 </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q3" id="q3_n1" value="-1" required>
-                    <label class="form-check-label" for="q3_n1">-1 (Very Dissimilar)</label>
+                    <input class="form-check-input" type="radio" name="q9" id="q9_n1" value="-1" required>
+                    <label class="form-check-label" for="q9_n1">-1 </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q3" id="q3_0" value="0" required>
-                    <label class="form-check-label" for="q3_0">0 (Very Dissimilar)</label>
+                    <input class="form-check-input" type="radio" name="q9" id="q9_0" value="0" required>
+                    <label class="form-check-label" for="q9_0">0 (so sánh với A thì X, Y như nhau (có thể cùng giống hoặc cùng khác))</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q3" id="q3_1" value="1" required>
-                    <label class="form-check-label" for="q3_1">1 (Very Dissimilar)</label>
+                    <input class="form-check-input" type="radio" name="q9" id="q9_1" value="1" required>
+                    <label class="form-check-label" for="q9_1">1 </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q3" id="q3_2" value="2" required>
-                    <label class="form-check-label" for="q3_2">2 (Very Dissimilar)</label>
+                    <input class="form-check-input" type="radio" name="q9" id="q9_2" value="2" required>
+                    <label class="form-check-label" for="q9_2">2 </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q3" id="q3_3" value="3" required>
-                    <label class="form-check-label" for="q3_3">3 (Very Similar)</label>
+                    <input class="form-check-input" type="radio" name="q9" id="q9_3" value="3" required>
+                    <label class="form-check-label" for="q9_3">3 (X rất khác A, Y rất giống A)</label>
                 </div>
             </div>
-            <input type="text" name="formid" value="2" hidden>
+            <input type="text" name="formid" value="1" hidden>
         </div>
     
         <div class="card form-group">
-            <div class="card-header">Comparison Test 4</div>
+            <div class="card-header">20</div>
             <div class="card-body">
                 <p>
                     <strong>Audio A :</strong>
-                    <audio controls src="/kaggle/repo/output/infer/vlsp2023emo/GroundTruth2/audio_A_4.wav">
+                    <audio controls src="axy_wavs/ground_truth+giangoi/emo_val_001120_surprise.wav">
                         Your browser does not support the audio element.
                     </audio>
                 </p>
                 <p>
                     <strong>Audio X :</strong>
-                    <audio controls src="/kaggle/repo/output/infer/vlsp2023emo/12-07-EXP17_multi_speaker_move_emo_enc_819177ad/GiangOi2/audio_X_4.wav">
+                    <audio controls src="axy_wavs/multi_spk+giangoi/emo_val_001120-emofs2_150000-surprise.wav">
                         Your browser does not support the audio element.
                     </audio>
                 </p>
                 <p>
                     <strong>Audio Y :</strong>
-                    <audio controls src="/kaggle/repo/output/infer/vlsp2023emo/12-07-EXP17_multi_speaker_move_emo_enc_819177ad/LMH2/audio_Y_4.wav">
+                    <audio controls src="axy_wavs/multi_spk+move_emo+giangoi/emo_val_001120-emofs2_150000-surprise.wav">
                         Your browser does not support the audio element.
                     </audio>
                 </p>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q4" id="q4_n3" value="-3" required>
-                    <label class="form-check-label" for="q4_n3">-3 (Very Dissimilar)</label>
+                    <input class="form-check-input" type="radio" name="q20" id="q20_n3" value="-3" required>
+                    <label class="form-check-label" for="q20_n3">-3 (X rất giống A, Y rất khác A)</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q4" id="q4_n2" value="-2" required>
-                    <label class="form-check-label" for="q4_n2">-2 (Very Dissimilar)</label>
+                    <input class="form-check-input" type="radio" name="q20" id="q20_n2" value="-2" required>
+                    <label class="form-check-label" for="q20_n2">-2 </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q4" id="q4_n1" value="-1" required>
-                    <label class="form-check-label" for="q4_n1">-1 (Very Dissimilar)</label>
+                    <input class="form-check-input" type="radio" name="q20" id="q20_n1" value="-1" required>
+                    <label class="form-check-label" for="q20_n1">-1 </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q4" id="q4_0" value="0" required>
-                    <label class="form-check-label" for="q4_0">0 (Very Dissimilar)</label>
+                    <input class="form-check-input" type="radio" name="q20" id="q20_0" value="0" required>
+                    <label class="form-check-label" for="q20_0">0 (so sánh với A thì X, Y như nhau (có thể cùng giống hoặc cùng khác))</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q4" id="q4_1" value="1" required>
-                    <label class="form-check-label" for="q4_1">1 (Very Dissimilar)</label>
+                    <input class="form-check-input" type="radio" name="q20" id="q20_1" value="1" required>
+                    <label class="form-check-label" for="q20_1">1 </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q4" id="q4_2" value="2" required>
-                    <label class="form-check-label" for="q4_2">2 (Very Dissimilar)</label>
+                    <input class="form-check-input" type="radio" name="q20" id="q20_2" value="2" required>
+                    <label class="form-check-label" for="q20_2">2 </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q4" id="q4_3" value="3" required>
-                    <label class="form-check-label" for="q4_3">3 (Very Similar)</label>
+                    <input class="form-check-input" type="radio" name="q20" id="q20_3" value="3" required>
+                    <label class="form-check-label" for="q20_3">3 (X rất khác A, Y rất giống A)</label>
                 </div>
             </div>
-            <input type="text" name="formid" value="2" hidden>
+            <input type="text" name="formid" value="1" hidden>
         </div>
     
         <div class="card form-group">
-            <div class="card-header">Comparison Test 5</div>
+            <div class="card-header">21</div>
             <div class="card-body">
                 <p>
                     <strong>Audio A :</strong>
-                    <audio controls src="/kaggle/repo/output/infer/vlsp2023emo/GroundTruth2/audio_A_5.wav">
+                    <audio controls src="axy_wavs/ground_truth+giangoi/emo_val_001120_surprise.wav">
                         Your browser does not support the audio element.
                     </audio>
                 </p>
                 <p>
                     <strong>Audio X :</strong>
-                    <audio controls src="/kaggle/repo/output/infer/vlsp2023emo/12-07-EXP17_multi_speaker_move_emo_enc_819177ad/GiangOi2/audio_X_5.wav">
+                    <audio controls src="axy_wavs/multi_spk+giangoi/emo_val_001120-emofs2_150000-surprise.wav">
                         Your browser does not support the audio element.
                     </audio>
                 </p>
                 <p>
                     <strong>Audio Y :</strong>
-                    <audio controls src="/kaggle/repo/output/infer/vlsp2023emo/12-07-EXP17_multi_speaker_move_emo_enc_819177ad/LMH2/audio_Y_5.wav">
+                    <audio controls src="axy_wavs/multi_spk+move_emo+giangoi/emo_val_001120-emofs2_150000-surprise.wav">
                         Your browser does not support the audio element.
                     </audio>
                 </p>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q5" id="q5_n3" value="-3" required>
-                    <label class="form-check-label" for="q5_n3">-3 (Very Dissimilar)</label>
+                    <input class="form-check-input" type="radio" name="q21" id="q21_n3" value="-3" required>
+                    <label class="form-check-label" for="q21_n3">-3 (X rất giống A, Y rất khác A)</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q5" id="q5_n2" value="-2" required>
-                    <label class="form-check-label" for="q5_n2">-2 (Very Dissimilar)</label>
+                    <input class="form-check-input" type="radio" name="q21" id="q21_n2" value="-2" required>
+                    <label class="form-check-label" for="q21_n2">-2 </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q5" id="q5_n1" value="-1" required>
-                    <label class="form-check-label" for="q5_n1">-1 (Very Dissimilar)</label>
+                    <input class="form-check-input" type="radio" name="q21" id="q21_n1" value="-1" required>
+                    <label class="form-check-label" for="q21_n1">-1 </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q5" id="q5_0" value="0" required>
-                    <label class="form-check-label" for="q5_0">0 (Very Dissimilar)</label>
+                    <input class="form-check-input" type="radio" name="q21" id="q21_0" value="0" required>
+                    <label class="form-check-label" for="q21_0">0 (so sánh với A thì X, Y như nhau (có thể cùng giống hoặc cùng khác))</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q5" id="q5_1" value="1" required>
-                    <label class="form-check-label" for="q5_1">1 (Very Dissimilar)</label>
+                    <input class="form-check-input" type="radio" name="q21" id="q21_1" value="1" required>
+                    <label class="form-check-label" for="q21_1">1 </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q5" id="q5_2" value="2" required>
-                    <label class="form-check-label" for="q5_2">2 (Very Dissimilar)</label>
+                    <input class="form-check-input" type="radio" name="q21" id="q21_2" value="2" required>
+                    <label class="form-check-label" for="q21_2">2 </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="q5" id="q5_3" value="3" required>
-                    <label class="form-check-label" for="q5_3">3 (Very Similar)</label>
+                    <input class="form-check-input" type="radio" name="q21" id="q21_3" value="3" required>
+                    <label class="form-check-label" for="q21_3">3 (X rất khác A, Y rất giống A)</label>
                 </div>
             </div>
-            <input type="text" name="formid" value="2" hidden>
+            <input type="text" name="formid" value="1" hidden>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">11</div>
+            <div class="card-body">
+                <p>
+                    <strong>Audio A :</strong>
+                    <audio controls src="axy_wavs/ground_truth+giangoi/emo_val_004700_angry.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <p>
+                    <strong>Audio X :</strong>
+                    <audio controls src="axy_wavs/multi_spk+move_emo+giangoi/emo_val_004700-emofs2_150000-angry.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <p>
+                    <strong>Audio Y :</strong>
+                    <audio controls src="axy_wavs/multi_spk+giangoi/emo_val_004700-emofs2_150000-angry.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q11" id="q11_n3" value="-3" required>
+                    <label class="form-check-label" for="q11_n3">-3 (X rất giống A, Y rất khác A)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q11" id="q11_n2" value="-2" required>
+                    <label class="form-check-label" for="q11_n2">-2 </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q11" id="q11_n1" value="-1" required>
+                    <label class="form-check-label" for="q11_n1">-1 </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q11" id="q11_0" value="0" required>
+                    <label class="form-check-label" for="q11_0">0 (so sánh với A thì X, Y như nhau (có thể cùng giống hoặc cùng khác))</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q11" id="q11_1" value="1" required>
+                    <label class="form-check-label" for="q11_1">1 </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q11" id="q11_2" value="2" required>
+                    <label class="form-check-label" for="q11_2">2 </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q11" id="q11_3" value="3" required>
+                    <label class="form-check-label" for="q11_3">3 (X rất khác A, Y rất giống A)</label>
+                </div>
+            </div>
+            <input type="text" name="formid" value="1" hidden>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">13</div>
+            <div class="card-body">
+                <p>
+                    <strong>Audio A :</strong>
+                    <audio controls src="axy_wavs/ground_truth+giangoi/emo_val_005212_sad.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <p>
+                    <strong>Audio X :</strong>
+                    <audio controls src="axy_wavs/finetune+giangoi/emo_val_005212-emofs2_158000-sad.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <p>
+                    <strong>Audio Y :</strong>
+                    <audio controls src="axy_wavs/multi_spk+giangoi/emo_val_005212-emofs2_150000-sad.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q13" id="q13_n3" value="-3" required>
+                    <label class="form-check-label" for="q13_n3">-3 (X rất giống A, Y rất khác A)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q13" id="q13_n2" value="-2" required>
+                    <label class="form-check-label" for="q13_n2">-2 </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q13" id="q13_n1" value="-1" required>
+                    <label class="form-check-label" for="q13_n1">-1 </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q13" id="q13_0" value="0" required>
+                    <label class="form-check-label" for="q13_0">0 (so sánh với A thì X, Y như nhau (có thể cùng giống hoặc cùng khác))</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q13" id="q13_1" value="1" required>
+                    <label class="form-check-label" for="q13_1">1 </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q13" id="q13_2" value="2" required>
+                    <label class="form-check-label" for="q13_2">2 </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q13" id="q13_3" value="3" required>
+                    <label class="form-check-label" for="q13_3">3 (X rất khác A, Y rất giống A)</label>
+                </div>
+            </div>
+            <input type="text" name="formid" value="1" hidden>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">12</div>
+            <div class="card-body">
+                <p>
+                    <strong>Audio A :</strong>
+                    <audio controls src="axy_wavs/ground_truth+giangoi/emo_val_004700_angry.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <p>
+                    <strong>Audio X :</strong>
+                    <audio controls src="axy_wavs/multi_spk+move_emo+giangoi/emo_val_004700-emofs2_150000-angry.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <p>
+                    <strong>Audio Y :</strong>
+                    <audio controls src="axy_wavs/multi_spk+giangoi/emo_val_004700-emofs2_150000-angry.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q12" id="q12_n3" value="-3" required>
+                    <label class="form-check-label" for="q12_n3">-3 (X rất giống A, Y rất khác A)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q12" id="q12_n2" value="-2" required>
+                    <label class="form-check-label" for="q12_n2">-2 </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q12" id="q12_n1" value="-1" required>
+                    <label class="form-check-label" for="q12_n1">-1 </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q12" id="q12_0" value="0" required>
+                    <label class="form-check-label" for="q12_0">0 (so sánh với A thì X, Y như nhau (có thể cùng giống hoặc cùng khác))</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q12" id="q12_1" value="1" required>
+                    <label class="form-check-label" for="q12_1">1 </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q12" id="q12_2" value="2" required>
+                    <label class="form-check-label" for="q12_2">2 </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q12" id="q12_3" value="3" required>
+                    <label class="form-check-label" for="q12_3">3 (X rất khác A, Y rất giống A)</label>
+                </div>
+            </div>
+            <input type="text" name="formid" value="1" hidden>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">16</div>
+            <div class="card-body">
+                <p>
+                    <strong>Audio A :</strong>
+                    <audio controls src="axy_wavs/ground_truth+giangoi/emo_val_001627_happy.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <p>
+                    <strong>Audio X :</strong>
+                    <audio controls src="axy_wavs/multi_spk+giangoi/emo_val_001627-emofs2_150000-happy.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <p>
+                    <strong>Audio Y :</strong>
+                    <audio controls src="axy_wavs/finetune+giangoi/emo_val_001627-emofs2_158000-happy.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q16" id="q16_n3" value="-3" required>
+                    <label class="form-check-label" for="q16_n3">-3 (X rất giống A, Y rất khác A)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q16" id="q16_n2" value="-2" required>
+                    <label class="form-check-label" for="q16_n2">-2 </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q16" id="q16_n1" value="-1" required>
+                    <label class="form-check-label" for="q16_n1">-1 </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q16" id="q16_0" value="0" required>
+                    <label class="form-check-label" for="q16_0">0 (so sánh với A thì X, Y như nhau (có thể cùng giống hoặc cùng khác))</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q16" id="q16_1" value="1" required>
+                    <label class="form-check-label" for="q16_1">1 </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q16" id="q16_2" value="2" required>
+                    <label class="form-check-label" for="q16_2">2 </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q16" id="q16_3" value="3" required>
+                    <label class="form-check-label" for="q16_3">3 (X rất khác A, Y rất giống A)</label>
+                </div>
+            </div>
+            <input type="text" name="formid" value="1" hidden>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">8</div>
+            <div class="card-body">
+                <p>
+                    <strong>Audio A :</strong>
+                    <audio controls src="axy_wavs/ground_truth+giangoi/emo_val_001694_neutral.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <p>
+                    <strong>Audio X :</strong>
+                    <audio controls src="axy_wavs/multi_spk+move_emo+giangoi/emo_val_001694-emofs2_150000-neutral.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <p>
+                    <strong>Audio Y :</strong>
+                    <audio controls src="axy_wavs/multi_spk+giangoi/emo_val_001694-emofs2_150000-neutral.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q8" id="q8_n3" value="-3" required>
+                    <label class="form-check-label" for="q8_n3">-3 (X rất giống A, Y rất khác A)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q8" id="q8_n2" value="-2" required>
+                    <label class="form-check-label" for="q8_n2">-2 </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q8" id="q8_n1" value="-1" required>
+                    <label class="form-check-label" for="q8_n1">-1 </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q8" id="q8_0" value="0" required>
+                    <label class="form-check-label" for="q8_0">0 (so sánh với A thì X, Y như nhau (có thể cùng giống hoặc cùng khác))</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q8" id="q8_1" value="1" required>
+                    <label class="form-check-label" for="q8_1">1 </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q8" id="q8_2" value="2" required>
+                    <label class="form-check-label" for="q8_2">2 </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q8" id="q8_3" value="3" required>
+                    <label class="form-check-label" for="q8_3">3 (X rất khác A, Y rất giống A)</label>
+                </div>
+            </div>
+            <input type="text" name="formid" value="1" hidden>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">17</div>
+            <div class="card-body">
+                <p>
+                    <strong>Audio A :</strong>
+                    <audio controls src="axy_wavs/ground_truth+giangoi/emo_val_001627_happy.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <p>
+                    <strong>Audio X :</strong>
+                    <audio controls src="axy_wavs/multi_spk+giangoi/emo_val_001627-emofs2_150000-happy.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <p>
+                    <strong>Audio Y :</strong>
+                    <audio controls src="axy_wavs/multi_spk+move_emo+giangoi/emo_val_001627-emofs2_150000-happy.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q17" id="q17_n3" value="-3" required>
+                    <label class="form-check-label" for="q17_n3">-3 (X rất giống A, Y rất khác A)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q17" id="q17_n2" value="-2" required>
+                    <label class="form-check-label" for="q17_n2">-2 </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q17" id="q17_n1" value="-1" required>
+                    <label class="form-check-label" for="q17_n1">-1 </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q17" id="q17_0" value="0" required>
+                    <label class="form-check-label" for="q17_0">0 (so sánh với A thì X, Y như nhau (có thể cùng giống hoặc cùng khác))</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q17" id="q17_1" value="1" required>
+                    <label class="form-check-label" for="q17_1">1 </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q17" id="q17_2" value="2" required>
+                    <label class="form-check-label" for="q17_2">2 </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q17" id="q17_3" value="3" required>
+                    <label class="form-check-label" for="q17_3">3 (X rất khác A, Y rất giống A)</label>
+                </div>
+            </div>
+            <input type="text" name="formid" value="1" hidden>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">19</div>
+            <div class="card-body">
+                <p>
+                    <strong>Audio A :</strong>
+                    <audio controls src="axy_wavs/ground_truth+giangoi/emo_val_001120_surprise.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <p>
+                    <strong>Audio X :</strong>
+                    <audio controls src="axy_wavs/multi_spk+giangoi/emo_val_001120-emofs2_150000-surprise.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <p>
+                    <strong>Audio Y :</strong>
+                    <audio controls src="axy_wavs/finetune+giangoi/emo_val_001120-emofs2_158000-surprise.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q19" id="q19_n3" value="-3" required>
+                    <label class="form-check-label" for="q19_n3">-3 (X rất giống A, Y rất khác A)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q19" id="q19_n2" value="-2" required>
+                    <label class="form-check-label" for="q19_n2">-2 </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q19" id="q19_n1" value="-1" required>
+                    <label class="form-check-label" for="q19_n1">-1 </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q19" id="q19_0" value="0" required>
+                    <label class="form-check-label" for="q19_0">0 (so sánh với A thì X, Y như nhau (có thể cùng giống hoặc cùng khác))</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q19" id="q19_1" value="1" required>
+                    <label class="form-check-label" for="q19_1">1 </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q19" id="q19_2" value="2" required>
+                    <label class="form-check-label" for="q19_2">2 </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q19" id="q19_3" value="3" required>
+                    <label class="form-check-label" for="q19_3">3 (X rất khác A, Y rất giống A)</label>
+                </div>
+            </div>
+            <input type="text" name="formid" value="1" hidden>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">14</div>
+            <div class="card-body">
+                <p>
+                    <strong>Audio A :</strong>
+                    <audio controls src="axy_wavs/ground_truth+giangoi/emo_val_005212_sad.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <p>
+                    <strong>Audio X :</strong>
+                    <audio controls src="axy_wavs/multi_spk+move_emo+giangoi/emo_val_005212-emofs2_150000-sad.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <p>
+                    <strong>Audio Y :</strong>
+                    <audio controls src="axy_wavs/finetune+giangoi/emo_val_005212-emofs2_158000-sad.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q14" id="q14_n3" value="-3" required>
+                    <label class="form-check-label" for="q14_n3">-3 (X rất giống A, Y rất khác A)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q14" id="q14_n2" value="-2" required>
+                    <label class="form-check-label" for="q14_n2">-2 </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q14" id="q14_n1" value="-1" required>
+                    <label class="form-check-label" for="q14_n1">-1 </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q14" id="q14_0" value="0" required>
+                    <label class="form-check-label" for="q14_0">0 (so sánh với A thì X, Y như nhau (có thể cùng giống hoặc cùng khác))</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q14" id="q14_1" value="1" required>
+                    <label class="form-check-label" for="q14_1">1 </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q14" id="q14_2" value="2" required>
+                    <label class="form-check-label" for="q14_2">2 </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q14" id="q14_3" value="3" required>
+                    <label class="form-check-label" for="q14_3">3 (X rất khác A, Y rất giống A)</label>
+                </div>
+            </div>
+            <input type="text" name="formid" value="1" hidden>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">18</div>
+            <div class="card-body">
+                <p>
+                    <strong>Audio A :</strong>
+                    <audio controls src="axy_wavs/ground_truth+giangoi/emo_val_001627_happy.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <p>
+                    <strong>Audio X :</strong>
+                    <audio controls src="axy_wavs/multi_spk+giangoi/emo_val_001627-emofs2_150000-happy.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <p>
+                    <strong>Audio Y :</strong>
+                    <audio controls src="axy_wavs/multi_spk+move_emo+giangoi/emo_val_001627-emofs2_150000-happy.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q18" id="q18_n3" value="-3" required>
+                    <label class="form-check-label" for="q18_n3">-3 (X rất giống A, Y rất khác A)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q18" id="q18_n2" value="-2" required>
+                    <label class="form-check-label" for="q18_n2">-2 </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q18" id="q18_n1" value="-1" required>
+                    <label class="form-check-label" for="q18_n1">-1 </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q18" id="q18_0" value="0" required>
+                    <label class="form-check-label" for="q18_0">0 (so sánh với A thì X, Y như nhau (có thể cùng giống hoặc cùng khác))</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q18" id="q18_1" value="1" required>
+                    <label class="form-check-label" for="q18_1">1 </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q18" id="q18_2" value="2" required>
+                    <label class="form-check-label" for="q18_2">2 </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q18" id="q18_3" value="3" required>
+                    <label class="form-check-label" for="q18_3">3 (X rất khác A, Y rất giống A)</label>
+                </div>
+            </div>
+            <input type="text" name="formid" value="1" hidden>
+        </div>
+    
+        <div class="card form-group">
+            <div class="card-header">15</div>
+            <div class="card-body">
+                <p>
+                    <strong>Audio A :</strong>
+                    <audio controls src="axy_wavs/ground_truth+giangoi/emo_val_005212_sad.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <p>
+                    <strong>Audio X :</strong>
+                    <audio controls src="axy_wavs/multi_spk+move_emo+giangoi/emo_val_005212-emofs2_150000-sad.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <p>
+                    <strong>Audio Y :</strong>
+                    <audio controls src="axy_wavs/multi_spk+giangoi/emo_val_005212-emofs2_150000-sad.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q15" id="q15_n3" value="-3" required>
+                    <label class="form-check-label" for="q15_n3">-3 (X rất giống A, Y rất khác A)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q15" id="q15_n2" value="-2" required>
+                    <label class="form-check-label" for="q15_n2">-2 </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q15" id="q15_n1" value="-1" required>
+                    <label class="form-check-label" for="q15_n1">-1 </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q15" id="q15_0" value="0" required>
+                    <label class="form-check-label" for="q15_0">0 (so sánh với A thì X, Y như nhau (có thể cùng giống hoặc cùng khác))</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q15" id="q15_1" value="1" required>
+                    <label class="form-check-label" for="q15_1">1 </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q15" id="q15_2" value="2" required>
+                    <label class="form-check-label" for="q15_2">2 </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="q15" id="q15_3" value="3" required>
+                    <label class="form-check-label" for="q15_3">3 (X rất khác A, Y rất giống A)</label>
+                </div>
+            </div>
+            <input type="text" name="formid" value="1" hidden>
         </div>
     
 
-            <input type="text" name="formid" value="2" hidden>
+            <input type="text" name="formid" value="1" hidden>
             <input type="text" name="thank" value="Cảm ơn bạn vì đã tham gia thí nghiệm này!" hidden>
             <input class="btn btn-info btn-lg" type="submit" value="Gửi kết quả" id="submitBtn">
             <p class="text-muted">

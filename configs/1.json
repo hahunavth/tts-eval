@@ -1,178 +1,291 @@
 {
-    "page_title": "test_create_test",
+    "page_title": "mos_naturalness_finetune_vs_multi_spk",
     "form_id": 1,
     "questions": [
         {
             "name": "q1",
-            "audio_path": "./wavs/12-07-EXP17_multi_speaker_move_emo_enc_819177ad/pv_yan_2_132-emofs2_50000-sad.wav",
+            "audio_path": "./wavs/finetune+giangoi/other_000000-emofs2_158000-angry.wav",
             "title": "C\u00e2u h\u1ecfi 1"
         },
         {
             "name": "q2",
-            "audio_path": "./wavs/12-07-EXP17_multi_speaker_move_emo_enc_819177ad/pv_yan_2_132-emofs2_50000-surprise.wav",
+            "audio_path": "./wavs/multi_spk+move_emo+giangoi/emo_val_001627-emofs2_150000-happy.wav",
             "title": "C\u00e2u h\u1ecfi 2"
         },
         {
             "name": "q3",
-            "audio_path": "./wavs/12-07-EXP17_multi_speaker_move_emo_enc_819177ad/pv_yan_2_133-emofs2_50000-happy.wav",
+            "audio_path": "./wavs/finetune+giangoi/neu_val_000214-emofs2_158000-surprise.wav",
             "title": "C\u00e2u h\u1ecfi 3"
         },
         {
             "name": "q4",
-            "audio_path": "./wavs/12-07-EXP17_multi_speaker_move_emo_enc_819177ad/pv_yan_2_135-emofs2_50000-surprise.wav",
+            "audio_path": "./wavs/finetune+giangoi/emo_val_004700-emofs2_158000-surprise.wav",
             "title": "C\u00e2u h\u1ecfi 4"
         },
         {
             "name": "q5",
-            "audio_path": "./wavs/12-05-EXP14-emofs2+shuffle_ref_mel+without_aug-120k/2-emofs2_120000-sad.wav",
+            "audio_path": "./wavs/multi_spk+move_emo+giangoi/other_000000-emofs2_150000-angry.wav",
             "title": "C\u00e2u h\u1ecfi 5"
         },
         {
             "name": "q6",
-            "audio_path": "./wavs/12-05-EXP14-emofs2+shuffle_ref_mel+without_aug-120k/pv_yan_2_133-emofs2_120000-happy.wav",
+            "audio_path": "./wavs/finetune+giangoi/emo_val_005212-emofs2_158000-happy.wav",
             "title": "C\u00e2u h\u1ecfi 6"
         },
         {
             "name": "q7",
-            "audio_path": "./wavs/12-07-EXP17_multi_speaker_move_emo_enc_819177ad/2-emofs2_50000-sad.wav",
+            "audio_path": "./wavs/multi_spk+giangoi/neu_val_000214-emofs2_150000-surprise.wav",
             "title": "C\u00e2u h\u1ecfi 7"
         },
         {
             "name": "q8",
-            "audio_path": "./wavs/12-05-EXP14-emofs2+shuffle_ref_mel+without_aug-120k/pv_yan_2_132-emofs2_120000-sad.wav",
+            "audio_path": "./wavs/multi_spk+move_emo+giangoi/neu_val_000214-emofs2_150000-surprise.wav",
             "title": "C\u00e2u h\u1ecfi 8"
         },
         {
             "name": "q9",
-            "audio_path": "./wavs/12-07-EXP17_multi_speaker_move_emo_enc_819177ad/pv_yan_2_135-emofs2_50000-neutral.wav",
+            "audio_path": "./wavs/multi_spk+giangoi/emo_val_001120-emofs2_150000-sad.wav",
             "title": "C\u00e2u h\u1ecfi 9"
         },
         {
             "name": "q10",
-            "audio_path": "./wavs/12-07-EXP17_multi_speaker_move_emo_enc_819177ad/6-emofs2_50000-neutral.wav",
+            "audio_path": "./wavs/finetune+giangoi/emo_val_001694-emofs2_158000-angry.wav",
             "title": "C\u00e2u h\u1ecfi 10"
         },
         {
             "name": "q11",
-            "audio_path": "./wavs/12-05-EXP14-emofs2+shuffle_ref_mel+without_aug-120k/6-emofs2_120000-neutral.wav",
+            "audio_path": "./wavs/multi_spk+giangoi/emo_val_005212-emofs2_150000-happy.wav",
             "title": "C\u00e2u h\u1ecfi 11"
         },
         {
             "name": "q12",
-            "audio_path": "./wavs/12-05-EXP14-emofs2+shuffle_ref_mel+without_aug-120k/pv_yan_2_135-emofs2_120000-neutral.wav",
+            "audio_path": "./wavs/multi_spk+giangoi/emo_val_004700-emofs2_150000-surprise.wav",
             "title": "C\u00e2u h\u1ecfi 12"
         },
         {
             "name": "q13",
-            "audio_path": "./wavs/12-07-EXP17_multi_speaker_move_emo_enc_819177ad/pv_yan_2_135-emofs2_50000-angry.wav",
+            "audio_path": "./wavs/multi_spk+giangoi/neu_val_005028-emofs2_150000-surprise.wav",
             "title": "C\u00e2u h\u1ecfi 13"
         },
         {
             "name": "q14",
-            "audio_path": "./wavs/12-05-EXP14-emofs2+shuffle_ref_mel+without_aug-120k/pv_yan_2_132-emofs2_120000-surprise.wav",
+            "audio_path": "./wavs/multi_spk+giangoi/emo_val_001627-emofs2_150000-happy.wav",
             "title": "C\u00e2u h\u1ecfi 14"
         },
         {
             "name": "q15",
-            "audio_path": "./wavs/12-05-EXP14-emofs2+shuffle_ref_mel+without_aug-120k/pv_yan_2_135-emofs2_120000-angry.wav",
+            "audio_path": "./wavs/multi_spk+move_emo+giangoi/emo_val_001694-emofs2_150000-angry.wav",
             "title": "C\u00e2u h\u1ecfi 15"
         },
         {
             "name": "q16",
-            "audio_path": "./wavs/12-05-EXP14-emofs2+shuffle_ref_mel+without_aug-120k/pv_yan_2_135-emofs2_120000-surprise.wav",
+            "audio_path": "./wavs/multi_spk+giangoi/other_000000-emofs2_150000-angry.wav",
             "title": "C\u00e2u h\u1ecfi 16"
+        },
+        {
+            "name": "q17",
+            "audio_path": "./wavs/finetune+giangoi/emo_val_001120-emofs2_158000-sad.wav",
+            "title": "C\u00e2u h\u1ecfi 17"
+        },
+        {
+            "name": "q18",
+            "audio_path": "./wavs/multi_spk+move_emo+giangoi/neu_val_005028-emofs2_150000-surprise.wav",
+            "title": "C\u00e2u h\u1ecfi 18"
+        },
+        {
+            "name": "q19",
+            "audio_path": "./wavs/multi_spk+giangoi/emo_val_001694-emofs2_150000-angry.wav",
+            "title": "C\u00e2u h\u1ecfi 19"
+        },
+        {
+            "name": "q20",
+            "audio_path": "./wavs/finetune+giangoi/emo_val_001627-emofs2_158000-happy.wav",
+            "title": "C\u00e2u h\u1ecfi 20"
+        },
+        {
+            "name": "q21",
+            "audio_path": "./wavs/multi_spk+giangoi/neu_val_007215-emofs2_150000-neutral.wav",
+            "title": "C\u00e2u h\u1ecfi 21"
+        },
+        {
+            "name": "q22",
+            "audio_path": "./wavs/multi_spk+move_emo+giangoi/emo_val_004700-emofs2_150000-surprise.wav",
+            "title": "C\u00e2u h\u1ecfi 22"
+        },
+        {
+            "name": "q23",
+            "audio_path": "./wavs/multi_spk+move_emo+giangoi/emo_val_005212-emofs2_150000-happy.wav",
+            "title": "C\u00e2u h\u1ecfi 23"
+        },
+        {
+            "name": "q24",
+            "audio_path": "./wavs/finetune+giangoi/neu_val_007215-emofs2_158000-neutral.wav",
+            "title": "C\u00e2u h\u1ecfi 24"
+        },
+        {
+            "name": "q25",
+            "audio_path": "./wavs/multi_spk+move_emo+giangoi/emo_val_001120-emofs2_150000-sad.wav",
+            "title": "C\u00e2u h\u1ecfi 25"
+        },
+        {
+            "name": "q26",
+            "audio_path": "./wavs/finetune+giangoi/neu_val_005028-emofs2_158000-surprise.wav",
+            "title": "C\u00e2u h\u1ecfi 26"
+        },
+        {
+            "name": "q27",
+            "audio_path": "./wavs/multi_spk+move_emo+giangoi/neu_val_007215-emofs2_150000-neutral.wav",
+            "title": "C\u00e2u h\u1ecfi 27"
         }
     ],
     "_meta": {
-        "max_file_per_exp": 8,
+        "max_file_per_exp": 9,
         "symmetry": true,
         "experiments": {
-            "12-05-EXP14-emofs2+shuffle_ref_mel+without_aug-120k": "/kaggle/repo/output/infer/vlsp2023emo/12-05-EXP14-emofs2+shuffle_ref_mel+without_aug-120k",
-            "12-07-EXP17_multi_speaker_move_emo_enc_819177ad": "/kaggle/repo/output/infer/vlsp2023emo/12-07-EXP17_multi_speaker_move_emo_enc_819177ad/GiangOi"
+            "finetune+giangoi": "/kaggle/repo/output/infer/vlsp2023emo/12-01-freeze-all-enc-GiangOi2/",
+            "multi_spk+giangoi": "/kaggle/repo/output/infer/vlsp2023emo/12-13-EXP15-multi-speaker-baseline-150k/GiangOi2/",
+            "multi_spk+move_emo+giangoi": "/kaggle/repo/output/infer/vlsp2023emo/12-13-EXP17_multi_speaker_move_emo_enc_819177ad-150k/GiangOi2/"
         },
         "selected_dic": {
-            "12-05-EXP14-emofs2+shuffle_ref_mel+without_aug-120k": [
+            "finetune+giangoi": [
                 {
-                    "fname": "2-emofs2_120000-sad.wav",
-                    "fid": 8,
-                    "qid": "q5"
+                    "fname": "emo_val_001120-emofs2_158000-sad.wav",
+                    "fid": 3,
+                    "qid": "q17"
                 },
                 {
-                    "fname": "6-emofs2_120000-neutral.wav",
-                    "fid": 27,
-                    "qid": "q11"
+                    "fname": "emo_val_001627-emofs2_158000-happy.wav",
+                    "fid": 6,
+                    "qid": "q20"
                 },
                 {
-                    "fname": "pv_yan_2_132-emofs2_120000-sad.wav",
-                    "fid": 43,
-                    "qid": "q8"
-                },
-                {
-                    "fname": "pv_yan_2_132-emofs2_120000-surprise.wav",
-                    "fid": 44,
-                    "qid": "q14"
-                },
-                {
-                    "fname": "pv_yan_2_133-emofs2_120000-happy.wav",
-                    "fid": 46,
-                    "qid": "q6"
-                },
-                {
-                    "fname": "pv_yan_2_135-emofs2_120000-angry.wav",
-                    "fid": 55,
-                    "qid": "q15"
-                },
-                {
-                    "fname": "pv_yan_2_135-emofs2_120000-neutral.wav",
-                    "fid": 57,
-                    "qid": "q12"
-                },
-                {
-                    "fname": "pv_yan_2_135-emofs2_120000-surprise.wav",
-                    "fid": 59,
-                    "qid": "q16"
-                }
-            ],
-            "12-07-EXP17_multi_speaker_move_emo_enc_819177ad": [
-                {
-                    "fname": "2-emofs2_50000-sad.wav",
-                    "fid": 8,
-                    "qid": "q7"
-                },
-                {
-                    "fname": "6-emofs2_50000-neutral.wav",
-                    "fid": 27,
+                    "fname": "emo_val_001694-emofs2_158000-angry.wav",
+                    "fid": 10,
                     "qid": "q10"
                 },
                 {
-                    "fname": "pv_yan_2_132-emofs2_50000-sad.wav",
-                    "fid": 43,
-                    "qid": "q1"
+                    "fname": "emo_val_004700-emofs2_158000-surprise.wav",
+                    "fid": 19,
+                    "qid": "q4"
                 },
                 {
-                    "fname": "pv_yan_2_132-emofs2_50000-surprise.wav",
-                    "fid": 44,
-                    "qid": "q2"
+                    "fname": "emo_val_005212-emofs2_158000-happy.wav",
+                    "fid": 21,
+                    "qid": "q6"
                 },
                 {
-                    "fname": "pv_yan_2_133-emofs2_50000-happy.wav",
-                    "fid": 46,
+                    "fname": "neu_val_000214-emofs2_158000-surprise.wav",
+                    "fid": 29,
                     "qid": "q3"
                 },
                 {
-                    "fname": "pv_yan_2_135-emofs2_50000-angry.wav",
-                    "fid": 55,
-                    "qid": "q13"
+                    "fname": "neu_val_005028-emofs2_158000-surprise.wav",
+                    "fid": 34,
+                    "qid": "q26"
                 },
                 {
-                    "fname": "pv_yan_2_135-emofs2_50000-neutral.wav",
-                    "fid": 57,
+                    "fname": "neu_val_007215-emofs2_158000-neutral.wav",
+                    "fid": 37,
+                    "qid": "q24"
+                },
+                {
+                    "fname": "other_000000-emofs2_158000-angry.wav",
+                    "fid": 40,
+                    "qid": "q1"
+                }
+            ],
+            "multi_spk+giangoi": [
+                {
+                    "fname": "emo_val_001120-emofs2_150000-sad.wav",
+                    "fid": 3,
                     "qid": "q9"
                 },
                 {
-                    "fname": "pv_yan_2_135-emofs2_50000-surprise.wav",
-                    "fid": 59,
-                    "qid": "q4"
+                    "fname": "emo_val_001627-emofs2_150000-happy.wav",
+                    "fid": 6,
+                    "qid": "q14"
+                },
+                {
+                    "fname": "emo_val_001694-emofs2_150000-angry.wav",
+                    "fid": 10,
+                    "qid": "q19"
+                },
+                {
+                    "fname": "emo_val_004700-emofs2_150000-surprise.wav",
+                    "fid": 19,
+                    "qid": "q12"
+                },
+                {
+                    "fname": "emo_val_005212-emofs2_150000-happy.wav",
+                    "fid": 21,
+                    "qid": "q11"
+                },
+                {
+                    "fname": "neu_val_000214-emofs2_150000-surprise.wav",
+                    "fid": 29,
+                    "qid": "q7"
+                },
+                {
+                    "fname": "neu_val_005028-emofs2_150000-surprise.wav",
+                    "fid": 34,
+                    "qid": "q13"
+                },
+                {
+                    "fname": "neu_val_007215-emofs2_150000-neutral.wav",
+                    "fid": 37,
+                    "qid": "q21"
+                },
+                {
+                    "fname": "other_000000-emofs2_150000-angry.wav",
+                    "fid": 40,
+                    "qid": "q16"
+                }
+            ],
+            "multi_spk+move_emo+giangoi": [
+                {
+                    "fname": "emo_val_001120-emofs2_150000-sad.wav",
+                    "fid": 3,
+                    "qid": "q25"
+                },
+                {
+                    "fname": "emo_val_001627-emofs2_150000-happy.wav",
+                    "fid": 6,
+                    "qid": "q2"
+                },
+                {
+                    "fname": "emo_val_001694-emofs2_150000-angry.wav",
+                    "fid": 10,
+                    "qid": "q15"
+                },
+                {
+                    "fname": "emo_val_004700-emofs2_150000-surprise.wav",
+                    "fid": 19,
+                    "qid": "q22"
+                },
+                {
+                    "fname": "emo_val_005212-emofs2_150000-happy.wav",
+                    "fid": 21,
+                    "qid": "q23"
+                },
+                {
+                    "fname": "neu_val_000214-emofs2_150000-surprise.wav",
+                    "fid": 29,
+                    "qid": "q8"
+                },
+                {
+                    "fname": "neu_val_005028-emofs2_150000-surprise.wav",
+                    "fid": 34,
+                    "qid": "q18"
+                },
+                {
+                    "fname": "neu_val_007215-emofs2_150000-neutral.wav",
+                    "fid": 37,
+                    "qid": "q27"
+                },
+                {
+                    "fname": "other_000000-emofs2_150000-angry.wav",
+                    "fid": 40,
+                    "qid": "q5"
                 }
             ]
         }
